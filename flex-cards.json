@@ -141,53 +141,6 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-map-w1.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "導航",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#313A47",
-                        "endColor": "#08101C"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4A515D",
-                      "action": {
-                        "type": "uri",
-                        "label": "導航",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=map&u=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D%25E9%259C%2596%25E6%25B2%2590%25E5%25AE%25A4%25E5%2585%25A7%25E8%25A3%259D%25E4%25BF%25AE%25E5%25B7%25A5%25E7%25A8%258B%2520%25E6%25A1%2583%25E5%259C%2592%25E5%25B8%2582%25E9%25BE%259C%25E5%25B1%25B1%25E5%258D%2580%25E9%2595%25B7%25E6%2585%25B6%25E4%25BA%258C%25E8%25A1%259726%25E8%2599%259F"
-                      }
-                    }
-                  ],
-                  "spacing": "sm"
-                },
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -221,7 +174,14 @@
                         "label": "來電諮詢",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
-                    },
+                    }
+                  ],
+                  "spacing": "sm"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
                     {
                       "type": "box",
                       "layout": "vertical",
@@ -259,7 +219,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"
                       }
                     }
                   ],
@@ -422,53 +382,6 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-map-w1.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "導航",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#313A47",
-                        "endColor": "#08101C"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4A515D",
-                      "action": {
-                        "type": "uri",
-                        "label": "導航",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=map&u=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D%25E9%259C%2596%25E6%25B2%2590%25E5%25AE%25A4%25E5%2585%25A7%25E8%25A3%259D%25E4%25BF%25AE%25E5%25B7%25A5%25E7%25A8%258B%2520%25E6%25A1%2583%25E5%259C%2592%25E5%25B8%2582%25E9%25BE%259C%25E5%25B1%25B1%25E5%258D%2580%25E9%2595%25B7%25E6%2585%25B6%25E4%25BA%258C%25E8%25A1%259726%25E8%2599%259F"
-                      }
-                    }
-                  ],
-                  "spacing": "sm"
-                },
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -502,7 +415,14 @@
                         "label": "來電諮詢",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
-                    },
+                    }
+                  ],
+                  "spacing": "sm"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
                     {
                       "type": "box",
                       "layout": "vertical",
@@ -540,7 +460,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"
                       }
                     }
                   ],
@@ -703,53 +623,6 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-map-w1.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "導航",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#313A47",
-                        "endColor": "#08101C"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4A515D",
-                      "action": {
-                        "type": "uri",
-                        "label": "導航",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=map&u=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D%25E9%259C%2596%25E6%25B2%2590%25E5%25AE%25A4%25E5%2585%25A7%25E8%25A3%259D%25E4%25BF%25AE%25E5%25B7%25A5%25E7%25A8%258B%2520%25E6%25A1%2583%25E5%259C%2592%25E5%25B8%2582%25E9%25BE%259C%25E5%25B1%25B1%25E5%258D%2580%25E9%2595%25B7%25E6%2585%25B6%25E4%25BA%258C%25E8%25A1%259726%25E8%2599%259F"
-                      }
-                    }
-                  ],
-                  "spacing": "sm"
-                },
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -783,7 +656,14 @@
                         "label": "來電諮詢",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
-                    },
+                    }
+                  ],
+                  "spacing": "sm"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
                     {
                       "type": "box",
                       "layout": "vertical",
@@ -821,7 +701,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"
                       }
                     }
                   ],
@@ -984,53 +864,6 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-map-w1.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "導航",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#313A47",
-                        "endColor": "#08101C"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4A515D",
-                      "action": {
-                        "type": "uri",
-                        "label": "導航",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=map&u=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D%25E9%259C%2596%25E6%25B2%2590%25E5%25AE%25A4%25E5%2585%25A7%25E8%25A3%259D%25E4%25BF%25AE%25E5%25B7%25A5%25E7%25A8%258B%2520%25E6%25A1%2583%25E5%259C%2592%25E5%25B8%2582%25E9%25BE%259C%25E5%25B1%25B1%25E5%258D%2580%25E9%2595%25B7%25E6%2585%25B6%25E4%25BA%258C%25E8%25A1%259726%25E8%2599%259F"
-                      }
-                    }
-                  ],
-                  "spacing": "sm"
-                },
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -1064,7 +897,14 @@
                         "label": "來電諮詢",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
-                    },
+                    }
+                  ],
+                  "spacing": "sm"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
                     {
                       "type": "box",
                       "layout": "vertical",
@@ -1102,7 +942,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"
                       }
                     }
                   ],
@@ -1265,53 +1105,6 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-map-w1.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "導航",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#313A47",
-                        "endColor": "#08101C"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4A515D",
-                      "action": {
-                        "type": "uri",
-                        "label": "導航",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=map&u=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D%25E9%259C%2596%25E6%25B2%2590%25E5%25AE%25A4%25E5%2585%25A7%25E8%25A3%259D%25E4%25BF%25AE%25E5%25B7%25A5%25E7%25A8%258B%2520%25E6%25A1%2583%25E5%259C%2592%25E5%25B8%2582%25E9%25BE%259C%25E5%25B1%25B1%25E5%258D%2580%25E9%2595%25B7%25E6%2585%25B6%25E4%25BA%258C%25E8%25A1%259726%25E8%2599%259F"
-                      }
-                    }
-                  ],
-                  "spacing": "sm"
-                },
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -1345,7 +1138,14 @@
                         "label": "來電諮詢",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
-                    },
+                    }
+                  ],
+                  "spacing": "sm"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
                     {
                       "type": "box",
                       "layout": "vertical",
@@ -1383,7 +1183,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"
                       }
                     }
                   ],
@@ -1650,7 +1450,7 @@
                   "contents": [
                     {
                       "type": "image",
-                      "url": "https://linmu.cardtaiwan.com/img/icon-map-v2.png",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-line-v5.png",
                       "size": "20px",
                       "aspectRatio": "1:1",
                       "aspectMode": "cover",
@@ -1658,7 +1458,7 @@
                     },
                     {
                       "type": "text",
-                      "text": "導航到門市",
+                      "text": "加 LINE 諮詢",
                       "size": "xxs",
                       "weight": "bold",
                       "color": "#FFFFFF",
@@ -1680,12 +1480,52 @@
                   "borderColor": "#4281CA",
                   "action": {
                     "type": "uri",
-                    "label": "導航到門市",
-                    "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=map&u=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D%25E9%259C%2596%25E6%25B2%2590%25E5%25AE%25A4%25E5%2585%25A7%25E8%25A3%259D%25E4%25BF%25AE%25E5%25B7%25A5%25E7%25A8%258B%2520%25E6%25A1%2583%25E5%259C%2592%25E5%25B8%2582%25E9%25BE%259C%25E5%25B1%25B1%25E5%258D%2580%25E9%2595%25B7%25E6%2585%25B6%25E4%25BA%258C%25E8%25A1%259726%25E8%2599%259F"
+                    "label": "加 LINE 諮詢",
+                    "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"
+                  }
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                      "size": "20px",
+                      "aspectRatio": "1:1",
+                      "aspectMode": "cover",
+                      "flex": 0
+                    },
+                    {
+                      "type": "text",
+                      "text": "來電諮詢",
+                      "size": "xxs",
+                      "weight": "bold",
+                      "color": "#FFFFFF",
+                      "wrap": true,
+                      "align": "center"
+                    }
+                  ],
+                  "spacing": "xs",
+                  "paddingAll": "10px",
+                  "background": {
+                    "type": "linearGradient",
+                    "angle": "90deg",
+                    "startColor": "#313A47",
+                    "endColor": "#08101C"
+                  },
+                  "cornerRadius": "100px",
+                  "flex": 1,
+                  "borderWidth": "1px",
+                  "borderColor": "#4A515D",
+                  "action": {
+                    "type": "uri",
+                    "label": "來電諮詢",
+                    "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                   }
                 }
               ],
-              "spacing": "none",
+              "spacing": "sm",
               "margin": "md"
             }
           ],
@@ -1801,53 +1641,6 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-map-w1.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "導航",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#313A47",
-                        "endColor": "#08101C"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4A515D",
-                      "action": {
-                        "type": "uri",
-                        "label": "導航",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=map&u=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3D%25E9%259C%2596%25E6%25B2%2590%25E5%25AE%25A4%25E5%2585%25A7%25E8%25A3%259D%25E4%25BF%25AE%25E5%25B7%25A5%25E7%25A8%258B%2520%25E6%25A1%2583%25E5%259C%2592%25E5%25B8%2582%25E9%25BE%259C%25E5%25B1%25B1%25E5%258D%2580%25E9%2595%25B7%25E6%2585%25B6%25E4%25BA%258C%25E8%25A1%259726%25E8%2599%259F"
-                      }
-                    }
-                  ],
-                  "spacing": "sm"
-                },
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -1881,7 +1674,14 @@
                         "label": "來電諮詢",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
-                    },
+                    }
+                  ],
+                  "spacing": "sm"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
                     {
                       "type": "box",
                       "layout": "vertical",
@@ -1919,7 +1719,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"
                       }
                     }
                   ],
