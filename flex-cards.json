@@ -149,7 +149,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "撥打電話",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -171,7 +171,7 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
+                        "label": "撥打電話",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
                     }
@@ -577,7 +577,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "撥打電話",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -599,7 +599,7 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
+                        "label": "撥打電話",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
                     }
@@ -710,7 +710,7 @@
                 },
                 {
                   "type": "text",
-                  "text": "設計到完工一手包",
+                  "text": "規劃 · 發包 · 完工",
                   "size": "xs",
                   "weight": "regular",
                   "color": "#93A4BC",
@@ -913,7 +913,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "撥打電話",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -935,7 +935,7 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
+                        "label": "撥打電話",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
                     }
@@ -1164,7 +1164,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "撥打電話",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -1186,7 +1186,7 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
+                        "label": "撥打電話",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
                     }
@@ -1516,7 +1516,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "撥打電話",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -1538,7 +1538,7 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
+                        "label": "撥打電話",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
                     }
@@ -1901,7 +1901,7 @@
                     },
                     {
                       "type": "text",
-                      "text": "來電諮詢",
+                      "text": "撥打電話",
                       "size": "xxs",
                       "weight": "bold",
                       "color": "#FFFFFF",
@@ -1923,7 +1923,7 @@
                   "borderColor": "#4A515D",
                   "action": {
                     "type": "uri",
-                    "label": "來電諮詢",
+                    "label": "撥打電話",
                     "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                   }
                 }
