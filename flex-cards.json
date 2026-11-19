@@ -12,7 +12,7 @@
             "backgroundColor": "#0A1424"
           },
           "footer": {
-            "backgroundColor": "#EEF3FA"
+            "backgroundColor": "#F5F1E8"
           }
         },
         "body": {
@@ -253,7 +253,7 @@
             "backgroundColor": "#0A1424"
           },
           "footer": {
-            "backgroundColor": "#EEF3FA"
+            "backgroundColor": "#F5F1E8"
           }
         },
         "body": {
@@ -494,7 +494,7 @@
             "backgroundColor": "#0A1424"
           },
           "footer": {
-            "backgroundColor": "#EEF3FA"
+            "backgroundColor": "#F5F1E8"
           }
         },
         "body": {
@@ -735,7 +735,7 @@
             "backgroundColor": "#0A1424"
           },
           "footer": {
-            "backgroundColor": "#EEF3FA"
+            "backgroundColor": "#F5F1E8"
           }
         },
         "body": {
@@ -976,7 +976,7 @@
             "backgroundColor": "#0A1424"
           },
           "footer": {
-            "backgroundColor": "#EEF3FA"
+            "backgroundColor": "#F5F1E8"
           }
         },
         "body": {
@@ -1214,7 +1214,7 @@
         "size": "mega",
         "styles": {
           "body": {
-            "backgroundColor": "#EEF3FA"
+            "backgroundColor": "#F5F1E8"
           },
           "footer": {
             "backgroundColor": "#FFFFFF"
@@ -1531,7 +1531,7 @@
           ],
           "spacing": "lg",
           "paddingAll": "16px",
-          "backgroundColor": "#EEF3FA"
+          "backgroundColor": "#F5F1E8"
         },
         "footer": {
           "type": "box",

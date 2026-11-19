@@ -21,13 +21,13 @@
 <meta property="og:url" content="https://linmu.cardtaiwan.com/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A1424">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔨</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230A1424'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-family='Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif' font-size='64' font-weight='800' fill='white'>沐</text></svg>">
 
 <style>
   :root{
     --navy:#0A1424; --navy-2:#060D18; --navy-3:#12233D;
     --brown:#0055B8; --gold:#0055B8; --gold-2:#4D93E6;
-    --ink:#253043; --paper:#F5F1E8; --muted:#5B6372; --brown-text:#9E6338; --red:#B4462F;
+    --ink:#253043; --paper:#F5F1E8; --muted:#5B6372; --brown-text:#8A5430; --red:#B4462F;
     --radius:20px;
     /* TODO C: 官網 / LINE / IG / FB 連結集中在頁面最下方 JS 的 LINKS 物件，改那裡就好 */
   }
@@ -84,7 +84,10 @@
   .btn .ic svg{width:20px;height:20px;display:block}
   /* Google Maps 是水滴形，視覺重量比方形 logo 輕，單獨放大補償 */
   .btn .ic svg.gm{width:auto;height:22px}
-  .btn.line{background:linear-gradient(180deg,#A8683C,#8F5630)}
+  .btn.line{background:var(--brown)}
+  /* hero：主 CTA＝品牌藍實心＋亮藍外框（填色對 hero 底僅 2.4～2.8:1，靠外框撐起元件邊界 ≥3:1）；次要＝透明底外框 */
+  .hero .btn.line{border:2px solid var(--gold-2);box-shadow:0 4px 14px rgba(0,85,184,.45)}
+  .hero .btn:not(.line){background:transparent;border:1.5px solid rgba(255,255,255,.6);box-shadow:none}
   .btn.tel{background:linear-gradient(180deg,#2E4675,var(--navy-2))}
 
   /* ── 區塊標題 ── */
@@ -96,21 +99,30 @@
   .rail::-webkit-scrollbar{display:none}
   /* 左右箭頭（JS 在 bindRail 建立）：疊在輪播列兩側、垂直置中（rail 上 4px／下 16px padding 故偏移 -6px） */
   .rail-wrap{position:relative}
-  .rail-arrow{position:absolute;top:0;z-index:2;width:40px;height:40px;padding:0 0 3px;
+  .rail-arrow{position:absolute;top:0;z-index:2;width:44px;height:44px;padding:0 0 3px;
     border:1px solid rgba(196,131,90,.55);border-radius:50%;background:rgba(245,241,232,.82);color:var(--navy);
     font-size:26px;line-height:1;font-family:inherit;display:flex;align-items:center;justify-content:center;cursor:pointer;
     -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(22,35,61,.18);
     -webkit-tap-highlight-color:transparent;transition:opacity .2s,background .2s,top .25s ease}
   .rail-arrow.prev{left:2px}
   .rail-arrow.next{right:2px}
+  /* 手機（≤768）隱藏箭頭：卡片露出邊緣＋圓點頁碼就是線索，箭頭不再壓在內容上；
+     桌機（>768）箭頭 44×44 並移到 520px 欄的外側，不壓卡片 */
+  @media (max-width:768px){ .rail-arrow{display:none !important} }
+  @media (min-width:769px){
+    .rail-arrow.prev{left:-54px}
+    .rail-arrow.next{right:-54px}
+  }
+  .rail{transition:height .25s ease}
+  @media (prefers-reduced-motion:reduce){ .rail{transition:none} }
   .rail-arrow:hover:not(:disabled){background:rgba(245,241,232,.96);color:var(--brown)}
   .rail-arrow:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .rail-arrow:disabled{opacity:.38;border-color:rgba(196,131,90,.4);cursor:default;box-shadow:none}
   .rail-arrow[hidden]{display:none}
-  .card{flex:0 0 86%;scroll-snap-align:center;background:#fff;border-radius:var(--radius);
+  .card{flex:0 0 86%;min-width:0;overflow-wrap:anywhere;scroll-snap-align:center;background:#fff;border-radius:var(--radius);
         padding:18px 16px;box-shadow:0 6px 22px rgba(22,35,61,.10);border:1px solid rgba(22,35,61,.06)}
-  .card h3{margin:0 0 4px;font-size:19px;color:var(--navy);letter-spacing:.02em;line-height:1.5}
-  .card h3 em{font-style:normal;color:var(--brown)}
+  .card h2{margin:0 0 4px;font-size:19px;color:var(--navy);letter-spacing:.02em;line-height:1.5}
+  .card h2 em{font-style:normal;color:var(--brown)}
   .card .sub{margin:0 0 14px;font-size:13.5px;color:var(--muted)}
   .card p{margin:0 0 10px;font-size:15px;line-height:1.75;color:#3C4658}
 
@@ -134,7 +146,7 @@
   .svc:last-child{border-bottom:0;padding-bottom:0}
   .svc .ico{flex:0 0 40px;height:40px;border-radius:12px;background:#F1EDE4;display:flex;
             align-items:center;justify-content:center;font-size:19px}
-  .svc h4{margin:0 0 2px;font-size:16px;color:var(--navy)}
+  .svc h3{margin:0 0 2px;font-size:16px;color:var(--navy)}
   .svc .tagsm{font-size:12px;color:var(--brown-text);font-weight:700;letter-spacing:.06em;margin-bottom:4px}
   .svc p{margin:0;font-size:14px;color:#4A5468;line-height:1.7}
 
@@ -147,7 +159,7 @@
   .steps li{position:relative;padding:9px 0 9px 46px;border-bottom:1px dashed rgba(22,35,61,.10);font-size:14px;color:#3C4658}
   .steps li:last-child{border-bottom:0}
   .steps li::before{counter-increment:s;content:"0" counter(s);position:absolute;left:0;top:9px;
-        font-size:13px;font-weight:800;color:#fff;background:#A8683C;border-radius:8px;padding:3px 7px}
+        font-size:13px;font-weight:800;color:#fff;background:var(--brown);border-radius:8px;padding:3px 7px}
   .steps b{color:var(--navy)}
 
   /* 2x2 工藝 */
@@ -157,7 +169,7 @@
              display:flex;align-items:center;justify-content:center;font-size:11px;color:#9AA1AE;letter-spacing:.1em}
   .craft img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
   .craft figcaption{padding:9px 9px 11px}
-  .craft h4{margin:0 0 3px;font-size:14.5px;color:var(--navy)}
+  .craft h3{margin:0 0 3px;font-size:14.5px;color:var(--navy)}
   .craft p{margin:0;font-size:12.5px;color:#5A6478;line-height:1.65}
 
   /* 作品牆 */
@@ -187,9 +199,9 @@
   .count{text-align:center;font-size:12px;color:var(--muted);margin:-4px 0 0;letter-spacing:.06em}
   .count b{color:var(--navy)}
   /* 圓點模式：只有 JS 成功建好圓點後才會加 .is-dots；沒跑到就維持上面的靜態文字 */
-  .count.is-dots{font-size:0;display:flex;justify-content:center;gap:0;margin:-10px 0 -2px}
-  /* 視覺 6×6，靠 padding + background-clip 把可點區域放大到約 14×34 */
-  .count.is-dots i{box-sizing:content-box;width:6px;height:6px;padding:14px 4px;border-radius:3px;
+  .count.is-dots{font-size:0;display:flex;justify-content:center;gap:0;margin:-15px 0 -7px}
+  /* 視覺 6×6，靠 padding + background-clip 把可點區域放大到 22×44 */
+  .count.is-dots i{box-sizing:content-box;width:6px;height:6px;padding:19px 8px;border-radius:3px;
         background:rgba(37,48,67,.2);background-clip:content-box;cursor:pointer;
         -webkit-tap-highlight-color:transparent;transition:width .2s,background-color .2s}
   .count.is-dots i.on{width:18px;background-color:var(--brown)}
@@ -234,9 +246,10 @@
         box-shadow:0 6px 22px rgba(22,35,61,.08);border:1px solid rgba(22,35,61,.06)}
   .info .row{display:flex;gap:10px;padding:12px 0;border-bottom:1px dashed rgba(22,35,61,.10);font-size:14.5px}
   .info .row:last-child{border-bottom:0}
+  .info .row > div:not(.k){min-width:0;overflow-wrap:anywhere}   /* 長 email 在 320 寬要能換行，不撐出水平捲動 */
   .info .k{flex:0 0 68px;color:var(--muted);font-size:12.5px;padding-top:3px;letter-spacing:.06em}
-  .info a{display:inline-block;padding:6px 0;color:var(--navy);text-decoration:underline;
-          text-decoration-color:var(--gold-2);text-underline-offset:4px;min-height:32px;font-weight:700}
+  .info a{display:inline-flex;align-items:center;padding:6px 0;color:var(--navy);text-decoration:underline;
+          text-decoration-color:var(--gold-2);text-underline-offset:4px;min-height:44px;font-weight:700}
   .info .soc a{margin-right:18px;display:inline-flex;align-items:center;gap:6px}
   .info .soc a svg{width:16px;height:16px;display:block;flex:0 0 16px}
   .info .note{font-size:12.5px;color:var(--muted)}
@@ -246,7 +259,7 @@
   .topbar{position:sticky;top:0;z-index:30;padding:8px 16px 6px;
           background:linear-gradient(180deg,var(--paper) 70%,rgba(245,241,234,.85) 100%)}
   /* 次要樣式：白底＋細外框＋深藍字，主角讓給底部 .dock 的 LINE／電話 */
-  .topbar button{width:100%;padding:7px 10px;border:1px solid rgba(37,48,67,.28);border-radius:12px;
+  .topbar button{width:100%;min-height:44px;padding:7px 10px;border:1px solid rgba(37,48,67,.28);border-radius:12px;
           background:#fff;color:var(--navy);
           font-size:13px;font-weight:700;font-family:inherit;letter-spacing:.06em;
           box-shadow:0 1px 2px rgba(22,35,61,.08);
@@ -296,7 +309,7 @@
         color:#8FE3B0;font:12px/1.7 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-all}
   #diag.show{display:block}
   #diag .bad{color:#FF9B8A}
-  footer{text-align:center;font-size:11.5px;color:#6B7280;margin:24px 20px 0;line-height:1.9}
+  footer{text-align:center;font-size:11.5px;color:#5B6372;margin:24px 20px 0;line-height:1.9}
   /* ═══ 分享模式：整頁只留一顆大按鈕（點卡片分享鈕進來時） ═══ */
   /* 按鈕固定在畫面最下方：用 flex + sticky，不依賴 position:fixed
      （LINE 內建瀏覽器對 fixed 的處理不一致；flex 的 min-height:100dvh
@@ -416,7 +429,7 @@
     </div>
 
     <nav class="actions" style="grid-template-columns:repeat(2,1fr)">
-      <a class="btn" data-link="line" href="#"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="6.6" fill="#06C755"/><g transform="translate(3.84 3.84) scale(0.68)"><path fill="#FFFFFF" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></g></svg></span>加 LINE 諮詢</a>
+      <a class="btn line" data-link="line" href="#"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="6.6" fill="#06C755"/><g transform="translate(3.84 3.84) scale(0.68)"><path fill="#FFFFFF" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></g></svg></span>加 LINE 諮詢</a>
       <a class="btn" href="https://liff.line.me/2011946176-OWaDN0zD?t=1&amp;c=linmu&amp;to=tel&amp;u=tel%3A%2B886979329120"><span class="ic">📞</span>撥打電話</a>
     </nav>
   </header>
@@ -426,7 +439,7 @@
   <div class="rail" id="rail">
 
     <article class="card">
-      <h3>我們專為<em>誰服務</em></h3>
+      <h2>我們專為<em>誰服務</em></h2>
       <div class="grid6">
         <div><span>🏠</span>老屋屋主</div><div><span>🔑</span>首購成家</div><div><span>🏬</span>小店面業主</div><div><span>🏢</span>辦公室</div><div><span>🔁</span>出租房東</div><div><span>📐</span>設計師</div>
       </div>
@@ -441,33 +454,33 @@
 
     <!-- ═══════════ 3 ═══════════ -->
     <article class="card">
-      <h3>我們能為你做什麼</h3>
+      <h2>我們能為你做什麼</h2>
       <p class="sub">從屋況評估到統整發包，一次到位</p>
       <div class="svc">
         <div class="ico">🏠</div>
         <div>
-          <h4>全室裝修</h4>
+          <h3>全室裝修</h3>
           <div class="tagsm">規劃 · 發包 · 完工</div>
           <p>從空間規劃、工種發包到完工驗收，全室翻新一次到位，你只要做決定。</p>
         </div>
       </div><div class="svc">
         <div class="ico">🧱</div>
         <div>
-          <h4>老屋翻新</h4>
+          <h3>老屋翻新</h3>
           <div class="tagsm">結構 · 水電 · 防水</div>
           <p>拆除後常見的結構、水電管線與漏水問題，一次處理乾淨，不必分好幾次施工。</p>
         </div>
       </div><div class="svc">
         <div class="ico">🏬</div>
         <div>
-          <h4>店面裝修</h4>
+          <h3>店面裝修</h3>
           <div class="tagsm">開店 · 時程 · 動線</div>
           <p>配合你的開幕時程安排工序，水電、木作、燈具與招牌一次整合，準時開門。</p>
         </div>
       </div><div class="svc">
         <div class="ico">🛠️</div>
         <div>
-          <h4>局部修繕</h4>
+          <h3>局部修繕</h3>
           <div class="tagsm">單項 · 小工程</div>
           <p>浴室、廚房、天花板或單一空間的小工程也接，不因為案子小就隨便。</p>
         </div>
@@ -476,7 +489,7 @@
 
     <!-- ═══════════ 4 ═══════════ -->
     <article class="card">
-      <h3>為什麼選擇 <em>霖沐</em>？</h3>
+      <h2>為什麼選擇 <em>霖沐</em>？</h2>
       <div class="stats">
         <div><b>10+ 年</b><span>室內裝修實務經驗</span></div><div><b>14 項</b><span>工程工種一次整合</span></div><div><b>1 對 1</b><span>專人負責到底</span></div>
       </div>
@@ -488,27 +501,27 @@
 
     <!-- ═══════════ 5 ═══════════ -->
     <article class="card">
-      <h3>工藝藏在<em>細節</em>，品質落在實處</h3>
+      <h2>工藝藏在<em>細節</em>，品質落在實處</h2>
       <div class="craft">
         <figure>
           <img src="craft1.jpg" alt="屋況檢視｜找出漏水根源" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=&quot;ph&quot;>照片</div>'">
-          <figcaption><h4>屋況檢視｜找出漏水根源</h4><p>拆開天花檢視管線與鏽蝕、滲水痕跡，先找到原因再處理</p></figcaption>
+          <figcaption><h3>屋況檢視｜找出漏水根源</h3><p>拆開天花檢視管線與鏽蝕、滲水痕跡，先找到原因再處理</p></figcaption>
         </figure><figure>
           <img src="craft2.jpg" alt="天花管線｜拆開才看得到" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=&quot;ph&quot;>照片</div>'">
-          <figcaption><h4>天花管線｜拆開才看得到</h4><p>輕鋼架內的水管、排水管與隔熱鋁箔，逐段檢視、一併整理</p></figcaption>
+          <figcaption><h3>天花管線｜拆開才看得到</h3><p>輕鋼架內的水管、排水管與隔熱鋁箔，逐段檢視、一併整理</p></figcaption>
         </figure><figure>
           <img src="craft3.jpg" alt="水電配管｜開槽走管" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=&quot;ph&quot;>照片</div>'">
-          <figcaption><h4>水電配管｜開槽走管</h4><p>地面開槽、埋設管線，水電配管的現場施工紀錄</p></figcaption>
+          <figcaption><h3>水電配管｜開槽走管</h3><p>地面開槽、埋設管線，水電配管的現場施工紀錄</p></figcaption>
         </figure><figure>
           <img src="craft4.jpg" alt="收尾回填｜配管後復原" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=&quot;ph&quot;>照片</div>'">
-          <figcaption><h4>收尾回填｜配管後復原</h4><p>配管完成後以水泥回填整平，為後續泥作與地坪做準備</p></figcaption>
+          <figcaption><h3>收尾回填｜配管後復原</h3><p>配管完成後以水泥回填整平，為後續泥作與地坪做準備</p></figcaption>
         </figure>
       </div>
     </article>
 
     <!-- ═══════════ 6 ═══════════ -->
     <article class="card">
-      <h3>施工<em>現場</em></h3>
+      <h2>施工<em>現場</em></h2>
       <p class="sub">施工現場實錄（店面窗邊、天花管線）</p>
       <div class="craft">
         <figure>
@@ -523,8 +536,8 @@
 
     <!-- ═══════════ 7 ═══════════ -->
     <article class="card">
-      <h3>讓我們聊聊<em>你的房子</em></h3>
-      <div class="box" style="text-align:center;background:#EEF3FA;border-style:solid">
+      <h2>讓我們聊聊<em>你的房子</em></h2>
+      <div class="box" style="text-align:center;background:#F5F1E8;border-style:solid">
         <p style="margin:0 0 6px;font-weight:800;color:var(--navy);font-size:15px">說說你的房子</p>
         <p style="margin:0;font-weight:800;color:var(--brown);font-size:15px">LINE 加 @lmdomus</p>
         <p style="margin:8px 0 0;font-size:13.5px;color:#4A5468">免費到府看屋況</p>
@@ -539,7 +552,7 @@
       </div>
 
       <nav class="actions" style="grid-template-columns:repeat(2,1fr);margin-top:16px">
-        <a class="btn" data-link="line" href="#"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="6.6" fill="#06C755"/><g transform="translate(3.84 3.84) scale(0.68)"><path fill="#FFFFFF" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></g></svg></span>加 LINE 諮詢</a>
+        <a class="btn line" data-link="line" href="#"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="6.6" fill="#06C755"/><g transform="translate(3.84 3.84) scale(0.68)"><path fill="#FFFFFF" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></g></svg></span>加 LINE 諮詢</a>
         <a class="btn" href="https://liff.line.me/2011946176-OWaDN0zD?t=1&amp;c=linmu&amp;to=tel&amp;u=tel%3A%2B886979329120"><span class="ic">📞</span>撥打電話</a>
       </nav>
     </article>
@@ -571,7 +584,6 @@
   <footer>
     霖沐室內裝修工程有限公司 DOMUS　全室裝修・老屋翻新・店面裝修・局部修繕<br>
     桃園市龜山區長慶二街26號　0979-329-120　統一編號 60406747<br>
-    <div id="viewCount" style="display:none"></div>
     © <span id="y"></span> LM Domus Interior Decoration Project Co., Ltd. All rights reserved.
   </footer>
 </div>
@@ -638,11 +650,11 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b102';
+const BUILD = 'b104';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
-const INLINE_FLEX = {"type":"flex","altText":"霖沐室內裝修工程｜黃聖霖 LION 電子名片","contents":{"type":"carousel","contents":[{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#EEF3FA"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"霖沐室內裝修工程　全室裝修・老屋翻新・店面裝修・局部修繕","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"1 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card1-v2.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#EEF3FA"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"老屋屋主・首購成家・小店面業主・辦公室・出租房東・設計師","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"2 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card2-v1.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#EEF3FA"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"全室裝修・老屋翻新・店面裝修・局部修繕","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"3 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card3-v1.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#EEF3FA"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"10+ 年經驗・14 項工種整合・1 對 1 專人負責","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"4 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card4-v2.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#EEF3FA"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"諮詢・會勘・估價・統整施工・驗收","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"5 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card5-v1.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#EEF3FA"},"footer":{"backgroundColor":"#FFFFFF"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"讓我們聊聊你的房子","size":"xl","weight":"bold","color":"#0A1424","wrap":true,"margin":"none"},{"type":"text","text":"拍下現場照片＋需求，LINE 傳給我免費評估","size":"xs","weight":"bold","color":"#0055B8","wrap":true,"margin":"xs"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"💬","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"@lmdomus","size":"md","weight":"bold","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"📞","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"0979-329-120","size":"md","weight":"bold","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"✉️","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"Doctor.huang0731@gmail.com","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"📍","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"桃園市龜山區長慶二街26號","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"⏰","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"週一～六 09:00-18:00","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"🏢","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"統編 60406747","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"}],"spacing":"none","margin":"md","paddingAll":"14px","backgroundColor":"#0A1424","cornerRadius":"20px"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"加 LINE 諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"加 LINE 諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm","margin":"md"}],"spacing":"lg","paddingAll":"16px","backgroundColor":"#EEF3FA"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"6 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"}}]}};
+const INLINE_FLEX = {"type":"flex","altText":"霖沐室內裝修工程｜黃聖霖 LION 電子名片","contents":{"type":"carousel","contents":[{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#F5F1E8"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"霖沐室內裝修工程　全室裝修・老屋翻新・店面裝修・局部修繕","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"1 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card1-v2.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#F5F1E8"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"老屋屋主・首購成家・小店面業主・辦公室・出租房東・設計師","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"2 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card2-v1.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#F5F1E8"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"全室裝修・老屋翻新・店面裝修・局部修繕","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"3 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card3-v1.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#F5F1E8"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"10+ 年經驗・14 項工種整合・1 對 1 專人負責","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"4 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card4-v2.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#0A1424"},"footer":{"backgroundColor":"#F5F1E8"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"諮詢・會勘・估價・統整施工・驗收","size":"xxs","weight":"regular","color":"#93A4BC","wrap":true,"margin":"none"}],"spacing":"md","paddingAll":"14px","backgroundColor":"#0A1424"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"5 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"},"hero":{"type":"image","url":"https://linmu.cardtaiwan.com/img/card5-v1.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover","action":{"type":"uri","label":"開啟名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=page&u=https%3A%2F%2Fliff.line.me%2F2011946176-a8hVcJCX"}}},{"type":"bubble","size":"mega","styles":{"body":{"backgroundColor":"#F5F1E8"},"footer":{"backgroundColor":"#FFFFFF"}},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"讓我們聊聊你的房子","size":"xl","weight":"bold","color":"#0A1424","wrap":true,"margin":"none"},{"type":"text","text":"拍下現場照片＋需求，LINE 傳給我免費評估","size":"xs","weight":"bold","color":"#0055B8","wrap":true,"margin":"xs"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"💬","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"@lmdomus","size":"md","weight":"bold","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"📞","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"0979-329-120","size":"md","weight":"bold","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"✉️","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"Doctor.huang0731@gmail.com","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"📍","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"桃園市龜山區長慶二街26號","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"⏰","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"週一～六 09:00-18:00","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"},{"type":"separator","margin":"lg","color":"#3A465C"},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"🏢","size":"lg","weight":"regular","color":"#0055B8","wrap":false,"flex":1},{"type":"text","text":"統編 60406747","size":"md","weight":"regular","color":"#FFFFFF","wrap":true,"margin":"none","flex":7}],"spacing":"sm","margin":"none"}],"spacing":"none","margin":"md","paddingAll":"14px","backgroundColor":"#0A1424","cornerRadius":"20px"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"加 LINE 諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"加 LINE 諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm","margin":"md"}],"spacing":"lg","paddingAll":"16px","backgroundColor":"#F5F1E8"},"footer":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"6 / 6","size":"xxs","weight":"regular","color":"#6B7280","wrap":false,"margin":"none","align":"center"},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-line-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"LINE","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#2970C3","endColor":"#004290"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4281CA","action":{"type":"uri","label":"LINE","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-ig-v3.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"IG","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"IG","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"}},{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-tel-v1.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"來電諮詢","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"來電諮詢","uri":"https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"}}],"spacing":"sm"},{"type":"box","layout":"horizontal","contents":[{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://linmu.cardtaiwan.com/img/icon-share-v5.png","size":"20px","aspectRatio":"1:1","aspectMode":"cover","flex":0},{"type":"text","text":"分享名片","size":"xxs","weight":"bold","color":"#FFFFFF","wrap":true,"align":"center"}],"spacing":"xs","paddingAll":"10px","background":{"type":"linearGradient","angle":"90deg","startColor":"#313A47","endColor":"#08101C"},"cornerRadius":"100px","flex":1,"borderWidth":"1px","borderColor":"#4A515D","action":{"type":"uri","label":"分享名片","uri":"https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-4"}}],"spacing":"sm"}],"spacing":"sm"}],"spacing":"sm","paddingAll":"10px"}}]}};
 /* ═══════ FLEX_PAYLOAD_END ═══════ */
 
 /* ═══════ F_CANDIDATE_START（由 build_flex.py 自動寫入，勿手改）═══════ */
@@ -1757,8 +1769,23 @@ function bindRail(){
     }
     /* 最接近中央的卡片加深陰影（只動 box-shadow，不動 transform） */
     [...rail.children].forEach((c, i) => c.classList.toggle('is-center', i === best));
+    fitHeight();
     updateArrows();
   };
+  /* 容器高度跟著目前那張卡走（矮卡不再被最高那張撐出大片空白）；
+     這段沒跑到時 .rail 是 height:auto＝最高那張的高度（保命線）。
+     卡片高度會因圖片載入／換寬度而變，所以用 ResizeObserver 追 */
+  const fitHeight = () => {
+    const c = rail.children[Math.max(0, shown)];
+    if(!c) return;
+    rail.style.height = (c.offsetHeight + 4 + 16) + 'px';      /* 4／16 ＝ .rail 上下 padding */
+  };
+  try{
+    if(window.ResizeObserver){
+      const ro = new ResizeObserver(() => { fitHeight(); updateArrows(); });
+      [...rail.children].forEach(c => ro.observe(c));
+    }
+  }catch(e){}
   /* 左右箭頭：rail 本身會捲動，箭頭要放在外層 .rail-wrap 才不會跟著捲走。
      重複呼叫時先清掉舊箭頭再建，不會重複 */
   let arrowL = null, arrowR = null;
@@ -2015,85 +2042,5 @@ bindRail();
   }catch(e){}
 })();
 </script>
-<!--VIEW_TRACK_BEGIN-->
-<script>
-/* 名片頁瀏覽數（由 rebuild_page.py 產生，勿手改）
-   view  ＝ 頁面被載入一次（匿名、uid 空，代表「次數」）
-   visit ＝ 有身分的人（LIFF userId，後端雜湊後存；代表「人數」），拿得到才送，同分頁一次
-   顯示 ＝ 「N 次瀏覽・M 位訪客」，來源 ?pub=（後端未更新時退回 ?views= 只顯示次數）*/
-(function(){
-  try{
-    var API = "https://script.google.com/macros/s/AKfycbz6-2txbuJk2l3xJCWM7KoemrFPM-rpZuxvcd2A8Jk126LTu5qhBZgup7dicVsA3649/exec", SLUG = "linmu";
-    if(!API || !SLUG) return;
-    /* 1) 記錄：無條件、立即送出（只靠 sessionStorage 去重），不等任何 GET */
-    var first = false;
-    try{ if(sessionStorage.getItem('viewLogged') !== '1'){ sessionStorage.setItem('viewLogged','1'); first = true; } }catch(e){ first = true; }
-    if(first){
-      var body = JSON.stringify({slug:SLUG, target:'view', uid:'', ts:Date.now(),
-                                 ua:'', ref:'', err:'view', name:'', pic:''});
-      try{
-        if(!(navigator.sendBeacon &&
-             navigator.sendBeacon(API, new Blob([body], {type:'text/plain;charset=utf-8'})))){
-          fetch(API, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'},
-                      body:body, keepalive:true}).catch(function(){});
-        }
-      }catch(e){}
-    }
-    /* 1b) 有身分的 visit：不主動 liff.init()（看名片模式刻意不init，避免跳授權畫面），
-           只在頁面已 init 過（liff.id 有值）且在 LINE 內時，才取 userId 補送一筆；拿不到就什麼都不做 */
-    var vTries = 0;
-    function sendVisit(){
-      try{
-        var vSent = false;
-        try{ vSent = sessionStorage.getItem('visitLogged') === '1'; }catch(e){}
-        if(vSent) return;
-        if(window.liff && liff.id && liff.isInClient && liff.isInClient() && liff.getProfile){
-          liff.getProfile().then(function(pf){
-            try{
-              if(!pf || !pf.userId) return;
-              try{
-                if(sessionStorage.getItem('visitLogged') === '1') return;
-                sessionStorage.setItem('visitLogged','1');
-              }catch(e){}
-              var vb = JSON.stringify({slug:SLUG, target:'visit', uid:pf.userId, ts:Date.now(),
-                                       ua:'', ref:'', err:'', name:'', pic:''});
-              if(!(navigator.sendBeacon &&
-                   navigator.sendBeacon(API, new Blob([vb], {type:'text/plain;charset=utf-8'})))){
-                fetch(API, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'},
-                            body:vb, keepalive:true}).catch(function(){});
-              }
-            }catch(e){}
-          }).catch(function(){});
-          return;
-        }
-      }catch(e){}
-      if(++vTries < 10) setTimeout(sendVisit, 1500);   /* LIFF 可能稍晚才 init 完，最多等約 15 秒 */
-    }
-    setTimeout(sendVisit, 1500);
-    /* 2) 顯示：另外排程，延後 1.2 秒讓上面的記錄先落地；失敗一律靜默，不影響記錄。
-          先 ?pub=（次數＋人數）；失敗／無效 → 退回 ?views=（只有次數）；都失敗就維持隱藏 */
-    setTimeout(function(){
-      var el = document.getElementById('viewCount');
-      if(!el) return;
-      function get(q){ return fetch(API + q + encodeURIComponent(SLUG)).then(function(r){ return r.json(); }); }
-      function show(t){ el.textContent = t; el.style.display = ''; }
-      try{
-        get('?pub=').then(function(d){
-          if(d && d.ok && Number(d.views) > 0){
-            show('👀 已有 ' + d.views + ' 次瀏覽' + (Number(d.visitors) > 0 ? '・' + d.visitors + ' 位訪客' : ''));
-            return;
-          }
-          throw 0;
-        }).catch(function(){
-          return get('?views=').then(function(d){
-            if(d && d.ok && Number(d.views) > 0) show('👀 已有 ' + d.views + ' 次瀏覽');
-          });
-        }).catch(function(){});
-      }catch(e){}
-    }, 1200);
-  }catch(e){}
-})();
-</script>
-<!--VIEW_TRACK_END-->
 </body>
 </html>
