@@ -290,7 +290,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card4-v1.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card4-v2.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover"
