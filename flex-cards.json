@@ -1291,13 +1291,13 @@
                   "layout": "horizontal",
                   "contents": [
                     {
-                      "type": "text",
-                      "text": "💬",
-                      "size": "lg",
-                      "weight": "regular",
-                      "color": "#4D93E6",
-                      "wrap": false,
-                      "flex": 1
+                      "type": "image",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-chat-flex-4D93E6-v1.png",
+                      "size": "22px",
+                      "aspectRatio": "1:1",
+                      "aspectMode": "fit",
+                      "flex": 1,
+                      "gravity": "center"
                     },
                     {
                       "type": "text",
@@ -1311,7 +1311,8 @@
                     }
                   ],
                   "spacing": "sm",
-                  "margin": "none"
+                  "margin": "none",
+                  "alignItems": "center"
                 },
                 {
                   "type": "separator",
@@ -1356,13 +1357,13 @@
                   "layout": "horizontal",
                   "contents": [
                     {
-                      "type": "text",
-                      "text": "✉️",
-                      "size": "lg",
-                      "weight": "regular",
-                      "color": "#4D93E6",
-                      "wrap": false,
-                      "flex": 1
+                      "type": "image",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-mail-flex-4D93E6-v1.png",
+                      "size": "22px",
+                      "aspectRatio": "1:1",
+                      "aspectMode": "fit",
+                      "flex": 1,
+                      "gravity": "center"
                     },
                     {
                       "type": "text",
@@ -1376,7 +1377,8 @@
                     }
                   ],
                   "spacing": "sm",
-                  "margin": "none"
+                  "margin": "none",
+                  "alignItems": "center"
                 },
                 {
                   "type": "separator",
@@ -1388,13 +1390,13 @@
                   "layout": "horizontal",
                   "contents": [
                     {
-                      "type": "text",
-                      "text": "📍",
-                      "size": "lg",
-                      "weight": "regular",
-                      "color": "#4D93E6",
-                      "wrap": false,
-                      "flex": 1
+                      "type": "image",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-map-flex-4D93E6-v1.png",
+                      "size": "22px",
+                      "aspectRatio": "1:1",
+                      "aspectMode": "fit",
+                      "flex": 1,
+                      "gravity": "center"
                     },
                     {
                       "type": "text",
@@ -1408,7 +1410,8 @@
                     }
                   ],
                   "spacing": "sm",
-                  "margin": "none"
+                  "margin": "none",
+                  "alignItems": "center"
                 },
                 {
                   "type": "separator",
@@ -1420,13 +1423,13 @@
                   "layout": "horizontal",
                   "contents": [
                     {
-                      "type": "text",
-                      "text": "⏰",
-                      "size": "lg",
-                      "weight": "regular",
-                      "color": "#4D93E6",
-                      "wrap": false,
-                      "flex": 1
+                      "type": "image",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-clock-flex-4D93E6-v1.png",
+                      "size": "22px",
+                      "aspectRatio": "1:1",
+                      "aspectMode": "fit",
+                      "flex": 1,
+                      "gravity": "center"
                     },
                     {
                       "type": "text",
@@ -1440,7 +1443,8 @@
                     }
                   ],
                   "spacing": "sm",
-                  "margin": "none"
+                  "margin": "none",
+                  "alignItems": "center"
                 },
                 {
                   "type": "separator",
@@ -1452,13 +1456,13 @@
                   "layout": "horizontal",
                   "contents": [
                     {
-                      "type": "text",
-                      "text": "🏢",
-                      "size": "lg",
-                      "weight": "regular",
-                      "color": "#4D93E6",
-                      "wrap": false,
-                      "flex": 1
+                      "type": "image",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-bizno-flex-4D93E6-v1.png",
+                      "size": "22px",
+                      "aspectRatio": "1:1",
+                      "aspectMode": "fit",
+                      "flex": 1,
+                      "gravity": "center"
                     },
                     {
                       "type": "text",
@@ -1472,7 +1476,8 @@
                     }
                   ],
                   "spacing": "sm",
-                  "margin": "none"
+                  "margin": "none",
+                  "alignItems": "center"
                 }
               ],
               "spacing": "none",
