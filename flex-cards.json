@@ -42,7 +42,7 @@
               "text": "1 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#656B78",
+              "color": "#4A5A75",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -261,23 +261,200 @@
           "layout": "vertical",
           "contents": [
             {
-              "type": "text",
-              "text": "老屋屋主・首購成家・小店面業主・辦公室・出租房東・設計師",
-              "size": "xxs",
-              "weight": "regular",
-              "color": "#93A4BC",
-              "wrap": true,
-              "margin": "none"
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "老屋屋主",
+                      "size": "xs",
+                      "weight": "bold",
+                      "color": "#FFFFFF",
+                      "wrap": false,
+                      "align": "center"
+                    }
+                  ],
+                  "spacing": "none",
+                  "paddingAll": "8px",
+                  "cornerRadius": "100px",
+                  "flex": 1,
+                  "borderWidth": "1px",
+                  "borderColor": "#4D93E6"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "首購成家",
+                      "size": "xs",
+                      "weight": "bold",
+                      "color": "#FFFFFF",
+                      "wrap": false,
+                      "align": "center"
+                    }
+                  ],
+                  "spacing": "none",
+                  "paddingAll": "8px",
+                  "cornerRadius": "100px",
+                  "flex": 1,
+                  "borderWidth": "1px",
+                  "borderColor": "#4D93E6"
+                }
+              ],
+              "spacing": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "小店面業主",
+                      "size": "xs",
+                      "weight": "bold",
+                      "color": "#FFFFFF",
+                      "wrap": false,
+                      "align": "center"
+                    }
+                  ],
+                  "spacing": "none",
+                  "paddingAll": "8px",
+                  "cornerRadius": "100px",
+                  "flex": 1,
+                  "borderWidth": "1px",
+                  "borderColor": "#4D93E6"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "辦公室",
+                      "size": "xs",
+                      "weight": "bold",
+                      "color": "#FFFFFF",
+                      "wrap": false,
+                      "align": "center"
+                    }
+                  ],
+                  "spacing": "none",
+                  "paddingAll": "8px",
+                  "cornerRadius": "100px",
+                  "flex": 1,
+                  "borderWidth": "1px",
+                  "borderColor": "#4D93E6"
+                }
+              ],
+              "spacing": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "出租房東",
+                      "size": "xs",
+                      "weight": "bold",
+                      "color": "#FFFFFF",
+                      "wrap": false,
+                      "align": "center"
+                    }
+                  ],
+                  "spacing": "none",
+                  "paddingAll": "8px",
+                  "cornerRadius": "100px",
+                  "flex": 1,
+                  "borderWidth": "1px",
+                  "borderColor": "#4D93E6"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "設計師",
+                      "size": "xs",
+                      "weight": "bold",
+                      "color": "#FFFFFF",
+                      "wrap": false,
+                      "align": "center"
+                    }
+                  ],
+                  "spacing": "none",
+                  "paddingAll": "8px",
+                  "cornerRadius": "100px",
+                  "flex": 1,
+                  "borderWidth": "1px",
+                  "borderColor": "#4D93E6"
+                }
+              ],
+              "spacing": "sm"
             },
             {
               "type": "text",
-              "text": "點圖看完整版 ›",
-              "size": "xxs",
+              "text": "你是不是也遇過這些狀況？",
+              "size": "sm",
               "weight": "bold",
               "color": "#4D93E6",
-              "wrap": false,
-              "margin": "none",
-              "align": "end"
+              "wrap": true,
+              "margin": "md"
+            },
+            {
+              "type": "text",
+              "text": "· 屋齡大了，不知道該從哪裡開始整理",
+              "size": "xs",
+              "weight": "regular",
+              "color": "#FFFFFF",
+              "wrap": true
+            },
+            {
+              "type": "text",
+              "text": "· 漏水、壁癌，抓不到真正的原因",
+              "size": "xs",
+              "weight": "regular",
+              "color": "#FFFFFF",
+              "wrap": true
+            },
+            {
+              "type": "text",
+              "text": "· 預算有限，不知道錢該花在哪",
+              "size": "xs",
+              "weight": "regular",
+              "color": "#FFFFFF",
+              "wrap": true
+            },
+            {
+              "type": "text",
+              "text": "· 中古屋拆除後，才發現問題一堆",
+              "size": "xs",
+              "weight": "regular",
+              "color": "#FFFFFF",
+              "wrap": true
+            },
+            {
+              "type": "text",
+              "text": "· 想自己發包，卻沒時間盯工班",
+              "size": "xs",
+              "weight": "regular",
+              "color": "#FFFFFF",
+              "wrap": true
             }
           ],
           "spacing": "sm",
@@ -293,7 +470,7 @@
               "text": "2 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#656B78",
+              "color": "#4A5A75",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -485,9 +662,9 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card2-v2.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card2-v3.jpg",
           "size": "full",
-          "aspectRatio": "3:4",
+          "aspectRatio": "1080:440",
           "aspectMode": "cover",
           "action": {
             "type": "uri",
@@ -513,22 +690,107 @@
           "contents": [
             {
               "type": "text",
-              "text": "全室裝修・老屋翻新・店面裝修・局部修繕",
-              "size": "xxs",
+              "text": "從屋況評估到統整發包，一次到位",
+              "size": "xs",
               "weight": "regular",
               "color": "#93A4BC",
-              "wrap": true,
-              "margin": "none"
+              "wrap": true
             },
             {
-              "type": "text",
-              "text": "點圖看完整版 ›",
-              "size": "xxs",
-              "weight": "bold",
-              "color": "#4D93E6",
-              "wrap": false,
-              "margin": "none",
-              "align": "end"
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "全室裝修",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "設計到完工一手包",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "老屋翻新",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "結構水電防水到位",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "店面裝修",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "開店時程幫你趕",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "局部修繕",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "小工程也有人負責",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
             }
           ],
           "spacing": "sm",
@@ -544,7 +806,7 @@
               "text": "3 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#656B78",
+              "color": "#4A5A75",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -736,9 +998,9 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card3-v2.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card3-v3.jpg",
           "size": "full",
-          "aspectRatio": "3:4",
+          "aspectRatio": "1080:440",
           "aspectMode": "cover",
           "action": {
             "type": "uri",
@@ -795,7 +1057,7 @@
               "text": "4 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#656B78",
+              "color": "#4A5A75",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -1014,23 +1276,124 @@
           "layout": "vertical",
           "contents": [
             {
-              "type": "text",
-              "text": "諮詢・會勘・估價・統整施工・驗收",
-              "size": "xxs",
-              "weight": "regular",
-              "color": "#93A4BC",
-              "wrap": true,
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "01  免費諮詢",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "先聊需求、預算與屋況，不收費",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
               "margin": "none"
             },
             {
-              "type": "text",
-              "text": "點圖看完整版 ›",
-              "size": "xxs",
-              "weight": "bold",
-              "color": "#4D93E6",
-              "wrap": false,
-              "margin": "none",
-              "align": "end"
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "02  現場會勘",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "看漏水、看結構，抓出優先處理順序",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "03  規劃估價",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "逐項列單價，說清楚每一筆錢花在哪",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "04  統整施工",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "各工種一次發包，進度與品質我盯",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "05  驗收交屋",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#FFFFFF",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "逐項確認，有問題當場處理",
+                  "size": "xs",
+                  "weight": "regular",
+                  "color": "#93A4BC",
+                  "wrap": true
+                }
+              ],
+              "spacing": "xs",
+              "margin": "md"
             }
           ],
           "spacing": "sm",
@@ -1046,7 +1409,7 @@
               "text": "5 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#656B78",
+              "color": "#4A5A75",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -1238,9 +1601,9 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card5-v2.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card5-v3.jpg",
           "size": "full",
-          "aspectRatio": "3:4",
+          "aspectRatio": "1080:440",
           "aspectMode": "cover",
           "action": {
             "type": "uri",
@@ -1254,10 +1617,10 @@
         "size": "mega",
         "styles": {
           "body": {
-            "backgroundColor": "#F5F1E8"
+            "backgroundColor": "#0A1424"
           },
           "footer": {
-            "backgroundColor": "#FFFFFF"
+            "backgroundColor": "#F5F1E8"
           }
         },
         "body": {
@@ -1269,7 +1632,7 @@
               "text": "讓我們聊聊你的房子",
               "size": "xl",
               "weight": "bold",
-              "color": "#0A1424",
+              "color": "#FFFFFF",
               "wrap": true,
               "margin": "none"
             },
@@ -1278,7 +1641,7 @@
               "text": "拍下現場照片＋需求，LINE 傳給我免費評估",
               "size": "xs",
               "weight": "bold",
-              "color": "#0055B8",
+              "color": "#4D93E6",
               "wrap": true,
               "margin": "xs"
             },
@@ -1295,7 +1658,7 @@
                       "text": "💬",
                       "size": "lg",
                       "weight": "regular",
-                      "color": "#0055B8",
+                      "color": "#4D93E6",
                       "wrap": false,
                       "flex": 1
                     },
@@ -1327,7 +1690,7 @@
                       "text": "📞",
                       "size": "lg",
                       "weight": "regular",
-                      "color": "#0055B8",
+                      "color": "#4D93E6",
                       "wrap": false,
                       "flex": 1
                     },
@@ -1359,7 +1722,7 @@
                       "text": "✉️",
                       "size": "lg",
                       "weight": "regular",
-                      "color": "#0055B8",
+                      "color": "#4D93E6",
                       "wrap": false,
                       "flex": 1
                     },
@@ -1391,7 +1754,7 @@
                       "text": "📍",
                       "size": "lg",
                       "weight": "regular",
-                      "color": "#0055B8",
+                      "color": "#4D93E6",
                       "wrap": false,
                       "flex": 1
                     },
@@ -1423,7 +1786,7 @@
                       "text": "⏰",
                       "size": "lg",
                       "weight": "regular",
-                      "color": "#0055B8",
+                      "color": "#4D93E6",
                       "wrap": false,
                       "flex": 1
                     },
@@ -1455,7 +1818,7 @@
                       "text": "🏢",
                       "size": "lg",
                       "weight": "regular",
-                      "color": "#0055B8",
+                      "color": "#4D93E6",
                       "wrap": false,
                       "flex": 1
                     },
@@ -1477,7 +1840,7 @@
               "spacing": "none",
               "margin": "md",
               "paddingAll": "14px",
-              "backgroundColor": "#0A1424",
+              "backgroundColor": "#12233D",
               "cornerRadius": "20px"
             },
             {
@@ -1571,7 +1934,7 @@
           ],
           "spacing": "lg",
           "paddingAll": "16px",
-          "backgroundColor": "#F5F1E8"
+          "backgroundColor": "#0A1424"
         },
         "footer": {
           "type": "box",
@@ -1582,7 +1945,7 @@
               "text": "6 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#656B78",
+              "color": "#4A5A75",
               "wrap": false,
               "margin": "none",
               "align": "center"

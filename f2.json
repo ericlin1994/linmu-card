@@ -144,7 +144,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card2-v2.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card2-v3.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover"
@@ -217,7 +217,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card3-v2.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card3-v3.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover"
@@ -363,7 +363,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card5-v2.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card5-v3.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover"
