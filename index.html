@@ -27,7 +27,7 @@
   :root{
     --navy:#0A1424; --navy-2:#060D18; --navy-3:#12233D;
     --brown:#0055B8; --gold:#0055B8; --gold-2:#4D93E6;
-    --ink:#253043; --paper:#F5F1E8; --muted:#5B6372; --brown-text:#8A5430; --red:#B4462F;
+    --ink:#253043; --paper:#F5F1E8; --muted:#5B6372; --brown-text:#0055B8; --red:#B4462F;
     --radius:20px;
     /* TODO C: 官網 / LINE / IG / FB 連結集中在頁面最下方 JS 的 LINKS 物件，改那裡就好 */
   }
@@ -47,7 +47,7 @@
   .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
         background:radial-gradient(120% 85% at 82% -12%,rgba(0,108,235,.22),transparent 62%)}
   .logo{font-size:17px;font-weight:800;letter-spacing:.30em;color:#fff}
-  .logo small{display:block;font-size:11px;font-weight:600;letter-spacing:.34em;color:#D8C79B;margin-top:4px}
+  .logo small{display:block;font-size:11px;font-weight:600;letter-spacing:.34em;color:#B8D2F5;margin-top:4px}
   .portrait{width:clamp(150px,44vw,184px);height:clamp(150px,44vw,184px);margin:16px auto 12px;border-radius:50%;object-fit:cover;
         border:2px solid rgba(255,255,255,.85);box-shadow:0 10px 26px rgba(0,0,0,.38);background:#2b3b5c;display:block}
   .portrait-ph{width:clamp(150px,44vw,184px);height:clamp(150px,44vw,184px);margin:16px auto 12px;border-radius:50%;
@@ -651,7 +651,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b112';
+const BUILD = 'b113';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
