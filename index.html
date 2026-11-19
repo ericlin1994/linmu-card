@@ -374,6 +374,14 @@
   html.share-wait #shareScreen .ss-logo,
   html.share-wait #shareScreen .ss-tip,
   html.share-wait #shareScreen .ss-bar{visibility:hidden}
+  /*HERO_V1_BEGIN*/
+  /* hero 與卡片封面統一（由 rebuild_page.py 產生，勿手改） */
+  .hero{background:#0A1424 url(hero_bg-632a6c95.jpg) left top/cover no-repeat}
+  .hero::after{background:linear-gradient(180deg,rgba(10,20,36,.30) 0%,rgba(10,20,36,.30) 100%)}
+  .hero > *{position:relative;z-index:1}
+  .name span{color:#B2CCE9}
+  .slogan i{color:#4D93E6}
+  /*HERO_V1_END*/
 </style>
 <script>
 /* 分享模式：在畫面繪製前就決定，避免先閃過一頁式網站再隱藏 */
@@ -649,7 +657,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b123';
+const BUILD = 'b124';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
