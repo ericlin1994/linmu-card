@@ -197,6 +197,16 @@
 
   .count{text-align:center;font-size:12px;color:var(--muted);margin:-4px 0 0;letter-spacing:.06em}
   .count b{color:var(--navy)}
+  /* 滑動提示：常駐在 rail 上方；深色字（#3C4658 在米白底約 8:1）。滑到最後一張時 JS 加 .is-end 改字 */
+  /* 提示用 sticky 黏在頂部分享列下方（只在 .rail-sec 範圍內），rail 很高時也看得到。
+     霖沐 .topbar 實測高 58px（Jerry 為 48px），top 對齊 58 才不會被分享列蓋住 */
+  .rail-hint{position:sticky;top:58px;z-index:20;margin:0;padding:5px 20px;text-align:center;font-size:14px;font-weight:700;line-height:1.5;
+        color:#3C4658;letter-spacing:.06em;background:var(--paper)}
+  .rail-hint .arr{display:inline-block;color:#3C4658}
+  .rail-hint .arr[hidden]{display:none}
+  .rail-hint:not(.is-end) .arr.r{animation:nudge 1.6s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+  @media (prefers-reduced-motion:reduce){ .rail-hint .arr.r{animation:none !important} }
   /* 圓點模式：只有 JS 成功建好圓點後才會加 .is-dots；沒跑到就維持上面的靜態文字 */
   .count.is-dots{font-size:0;display:flex;justify-content:center;gap:0;margin:-15px 0 -7px}
   /* 視覺 6×6，靠 padding + background-clip 把可點區域放大到 22×44 */
@@ -443,6 +453,8 @@
 
   <!-- ═══════════ 2 ═══════════ -->
   <div class="sec-title">ABOUT｜<em>認識霖沐</em></div>
+  <div class="rail-sec">
+  <p class="rail-hint" id="railHint"><span class="arr l" aria-hidden="true">←</span> <span class="rh-txt">左右滑動看更多</span> <span class="arr r" aria-hidden="true">→</span></p>
   <div class="rail" id="rail">
 
     <article class="card">
@@ -565,6 +577,7 @@
     </article>
 
   </div>
+  </div><!-- /.rail-sec -->
   <div class="count" id="count"><b>1</b> / 6　左右滑動看更多</div>
 
 
@@ -657,7 +670,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b124';
+const BUILD = 'b126';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
@@ -1777,6 +1790,15 @@ function bindRail(){
     /* 最接近中央的卡片加深陰影（只動 box-shadow，不動 transform） */
     [...rail.children].forEach((c, i) => c.classList.toggle('is-center', i === best));
     updateArrows();
+    /* 滑動提示：到最後一張改成「已經到底」，不再邀請往右滑 */
+    const hint = document.getElementById('railHint');
+    if(hint){
+      const end = best >= n - 1;
+      hint.classList.toggle('is-end', end);
+      const t = hint.querySelector('.rh-txt');
+      if(t) t.textContent = end ? '已經到底了' : '左右滑動看更多';
+      hint.querySelector('.arr.r').hidden = end;
+    }
   };
   /* 左右箭頭：rail 本身會捲動，箭頭要放在外層 .rail-wrap 才不會跟著捲走。
      重複呼叫時先清掉舊箭頭再建，不會重複 */
