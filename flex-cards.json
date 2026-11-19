@@ -82,13 +82,13 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#0055B8",
-                        "endColor": "#004290"
+                        "startColor": "#006CEB",
+                        "endColor": "#0054B7"
                       },
                       "cornerRadius": "100px",
                       "flex": 1,
                       "borderWidth": "1px",
-                      "borderColor": "#4281CA",
+                      "borderColor": "#4292F0",
                       "action": {
                         "type": "uri",
                         "label": "LINE",
@@ -510,13 +510,13 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#0055B8",
-                        "endColor": "#004290"
+                        "startColor": "#006CEB",
+                        "endColor": "#0054B7"
                       },
                       "cornerRadius": "100px",
                       "flex": 1,
                       "borderWidth": "1px",
-                      "borderColor": "#4281CA",
+                      "borderColor": "#4292F0",
                       "action": {
                         "type": "uri",
                         "label": "LINE",
@@ -846,13 +846,13 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#0055B8",
-                        "endColor": "#004290"
+                        "startColor": "#006CEB",
+                        "endColor": "#0054B7"
                       },
                       "cornerRadius": "100px",
                       "flex": 1,
                       "borderWidth": "1px",
-                      "borderColor": "#4281CA",
+                      "borderColor": "#4292F0",
                       "action": {
                         "type": "uri",
                         "label": "LINE",
@@ -1097,13 +1097,13 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#0055B8",
-                        "endColor": "#004290"
+                        "startColor": "#006CEB",
+                        "endColor": "#0054B7"
                       },
                       "cornerRadius": "100px",
                       "flex": 1,
                       "borderWidth": "1px",
-                      "borderColor": "#4281CA",
+                      "borderColor": "#4292F0",
                       "action": {
                         "type": "uri",
                         "label": "LINE",
@@ -1449,13 +1449,13 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#0055B8",
-                        "endColor": "#004290"
+                        "startColor": "#006CEB",
+                        "endColor": "#0054B7"
                       },
                       "cornerRadius": "100px",
                       "flex": 1,
                       "borderWidth": "1px",
-                      "borderColor": "#4281CA",
+                      "borderColor": "#4292F0",
                       "action": {
                         "type": "uri",
                         "label": "LINE",
@@ -1874,13 +1874,13 @@
                   "background": {
                     "type": "linearGradient",
                     "angle": "90deg",
-                    "startColor": "#0055B8",
-                    "endColor": "#004290"
+                    "startColor": "#006CEB",
+                    "endColor": "#0054B7"
                   },
                   "cornerRadius": "100px",
                   "flex": 1,
                   "borderWidth": "1px",
-                  "borderColor": "#4281CA",
+                  "borderColor": "#4292F0",
                   "action": {
                     "type": "uri",
                     "label": "加 LINE 諮詢",

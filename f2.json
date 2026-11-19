@@ -46,7 +46,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "LINE 諮詢",
+                  "text": "加 LINE 諮詢",
                   "size": "xs",
                   "weight": "bold",
                   "color": "#FFFFFF",
@@ -56,11 +56,11 @@
               ],
               "spacing": "md",
               "paddingAll": "12px",
-              "backgroundColor": "#0055B8",
+              "backgroundColor": "#006CEB",
               "cornerRadius": "100px",
               "action": {
                 "type": "uri",
-                "label": "LINE 諮詢",
+                "label": "加 LINE 諮詢",
                 "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
               }
             }
@@ -119,7 +119,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "LINE 諮詢",
+                  "text": "加 LINE 諮詢",
                   "size": "xs",
                   "weight": "bold",
                   "color": "#FFFFFF",
@@ -129,11 +129,11 @@
               ],
               "spacing": "md",
               "paddingAll": "12px",
-              "backgroundColor": "#0055B8",
+              "backgroundColor": "#006CEB",
               "cornerRadius": "100px",
               "action": {
                 "type": "uri",
-                "label": "LINE 諮詢",
+                "label": "加 LINE 諮詢",
                 "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
               }
             }
@@ -172,7 +172,7 @@
             },
             {
               "type": "text",
-              "text": "· 我們能為你做什麼\n· 全室裝修 設計到完工一手包\n· 老屋翻新 結構水電防水到位\n· 店面裝修 開店時程幫你趕\n· 局部修繕 小工程也有人負責",
+              "text": "· 我們能為你做什麼\n· 全室裝修 規劃 · 發包 · 完工\n· 老屋翻新 結構水電防水到位\n· 店面裝修 開店時程幫你趕\n· 局部修繕 小工程也有人負責",
               "size": "xs",
               "weight": "regular",
               "color": "#93A4BC",
@@ -192,7 +192,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "LINE 諮詢",
+                  "text": "加 LINE 諮詢",
                   "size": "xs",
                   "weight": "bold",
                   "color": "#FFFFFF",
@@ -202,11 +202,11 @@
               ],
               "spacing": "md",
               "paddingAll": "12px",
-              "backgroundColor": "#0055B8",
+              "backgroundColor": "#006CEB",
               "cornerRadius": "100px",
               "action": {
                 "type": "uri",
-                "label": "LINE 諮詢",
+                "label": "加 LINE 諮詢",
                 "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
               }
             }
@@ -265,7 +265,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "LINE 諮詢",
+                  "text": "加 LINE 諮詢",
                   "size": "xs",
                   "weight": "bold",
                   "color": "#FFFFFF",
@@ -275,11 +275,11 @@
               ],
               "spacing": "md",
               "paddingAll": "12px",
-              "backgroundColor": "#0055B8",
+              "backgroundColor": "#006CEB",
               "cornerRadius": "100px",
               "action": {
                 "type": "uri",
-                "label": "LINE 諮詢",
+                "label": "加 LINE 諮詢",
                 "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
               }
             }
@@ -338,7 +338,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "LINE 諮詢",
+                  "text": "加 LINE 諮詢",
                   "size": "xs",
                   "weight": "bold",
                   "color": "#FFFFFF",
@@ -348,11 +348,11 @@
               ],
               "spacing": "md",
               "paddingAll": "12px",
-              "backgroundColor": "#0055B8",
+              "backgroundColor": "#006CEB",
               "cornerRadius": "100px",
               "action": {
                 "type": "uri",
-                "label": "LINE 諮詢",
+                "label": "加 LINE 諮詢",
                 "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
               }
             }
@@ -411,7 +411,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "LINE 諮詢",
+                  "text": "加 LINE 諮詢",
                   "size": "xs",
                   "weight": "bold",
                   "color": "#FFFFFF",
@@ -421,11 +421,11 @@
               ],
               "spacing": "md",
               "paddingAll": "12px",
-              "backgroundColor": "#0055B8",
+              "backgroundColor": "#006CEB",
               "cornerRadius": "100px",
               "action": {
                 "type": "uri",
-                "label": "LINE 諮詢",
+                "label": "加 LINE 諮詢",
                 "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
               }
             }
