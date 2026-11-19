@@ -101,7 +101,7 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-ig-v3.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
                           "aspectMode": "cover",
@@ -109,7 +109,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "IG",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -131,8 +131,8 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                        "label": "IG",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"
                       }
                     },
                     {
@@ -188,6 +188,46 @@
                       "contents": [
                         {
                           "type": "image",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "size": "20px",
+                          "aspectRatio": "1:1",
+                          "aspectMode": "cover",
+                          "flex": 0
+                        },
+                        {
+                          "type": "text",
+                          "text": "來電諮詢",
+                          "size": "xxs",
+                          "weight": "bold",
+                          "color": "#FFFFFF",
+                          "wrap": true,
+                          "align": "center"
+                        }
+                      ],
+                      "spacing": "xs",
+                      "paddingAll": "10px",
+                      "background": {
+                        "type": "linearGradient",
+                        "angle": "90deg",
+                        "startColor": "#313A47",
+                        "endColor": "#08101C"
+                      },
+                      "cornerRadius": "100px",
+                      "flex": 1,
+                      "borderWidth": "1px",
+                      "borderColor": "#4A515D",
+                      "action": {
+                        "type": "uri",
+                        "label": "來電諮詢",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                      }
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-share-v5.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -219,7 +259,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-2"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
                       }
                     }
                   ],
@@ -342,7 +382,7 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-ig-v3.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
                           "aspectMode": "cover",
@@ -350,7 +390,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "IG",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -372,8 +412,8 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                        "label": "IG",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"
                       }
                     },
                     {
@@ -429,6 +469,46 @@
                       "contents": [
                         {
                           "type": "image",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "size": "20px",
+                          "aspectRatio": "1:1",
+                          "aspectMode": "cover",
+                          "flex": 0
+                        },
+                        {
+                          "type": "text",
+                          "text": "來電諮詢",
+                          "size": "xxs",
+                          "weight": "bold",
+                          "color": "#FFFFFF",
+                          "wrap": true,
+                          "align": "center"
+                        }
+                      ],
+                      "spacing": "xs",
+                      "paddingAll": "10px",
+                      "background": {
+                        "type": "linearGradient",
+                        "angle": "90deg",
+                        "startColor": "#313A47",
+                        "endColor": "#08101C"
+                      },
+                      "cornerRadius": "100px",
+                      "flex": 1,
+                      "borderWidth": "1px",
+                      "borderColor": "#4A515D",
+                      "action": {
+                        "type": "uri",
+                        "label": "來電諮詢",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                      }
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-share-v5.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -460,7 +540,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-2"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
                       }
                     }
                   ],
@@ -583,7 +663,7 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-ig-v3.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
                           "aspectMode": "cover",
@@ -591,7 +671,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "IG",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -613,8 +693,8 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                        "label": "IG",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"
                       }
                     },
                     {
@@ -670,6 +750,46 @@
                       "contents": [
                         {
                           "type": "image",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "size": "20px",
+                          "aspectRatio": "1:1",
+                          "aspectMode": "cover",
+                          "flex": 0
+                        },
+                        {
+                          "type": "text",
+                          "text": "來電諮詢",
+                          "size": "xxs",
+                          "weight": "bold",
+                          "color": "#FFFFFF",
+                          "wrap": true,
+                          "align": "center"
+                        }
+                      ],
+                      "spacing": "xs",
+                      "paddingAll": "10px",
+                      "background": {
+                        "type": "linearGradient",
+                        "angle": "90deg",
+                        "startColor": "#313A47",
+                        "endColor": "#08101C"
+                      },
+                      "cornerRadius": "100px",
+                      "flex": 1,
+                      "borderWidth": "1px",
+                      "borderColor": "#4A515D",
+                      "action": {
+                        "type": "uri",
+                        "label": "來電諮詢",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                      }
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-share-v5.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -701,7 +821,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-2"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
                       }
                     }
                   ],
@@ -824,7 +944,7 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-ig-v3.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
                           "aspectMode": "cover",
@@ -832,7 +952,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "IG",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -854,8 +974,8 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                        "label": "IG",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"
                       }
                     },
                     {
@@ -911,6 +1031,46 @@
                       "contents": [
                         {
                           "type": "image",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "size": "20px",
+                          "aspectRatio": "1:1",
+                          "aspectMode": "cover",
+                          "flex": 0
+                        },
+                        {
+                          "type": "text",
+                          "text": "來電諮詢",
+                          "size": "xxs",
+                          "weight": "bold",
+                          "color": "#FFFFFF",
+                          "wrap": true,
+                          "align": "center"
+                        }
+                      ],
+                      "spacing": "xs",
+                      "paddingAll": "10px",
+                      "background": {
+                        "type": "linearGradient",
+                        "angle": "90deg",
+                        "startColor": "#313A47",
+                        "endColor": "#08101C"
+                      },
+                      "cornerRadius": "100px",
+                      "flex": 1,
+                      "borderWidth": "1px",
+                      "borderColor": "#4A515D",
+                      "action": {
+                        "type": "uri",
+                        "label": "來電諮詢",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                      }
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-share-v5.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -942,7 +1102,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-2"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
                       }
                     }
                   ],
@@ -1065,7 +1225,7 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-ig-v3.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
                           "aspectMode": "cover",
@@ -1073,7 +1233,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "IG",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -1095,8 +1255,8 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                        "label": "IG",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"
                       }
                     },
                     {
@@ -1152,6 +1312,46 @@
                       "contents": [
                         {
                           "type": "image",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "size": "20px",
+                          "aspectRatio": "1:1",
+                          "aspectMode": "cover",
+                          "flex": 0
+                        },
+                        {
+                          "type": "text",
+                          "text": "來電諮詢",
+                          "size": "xxs",
+                          "weight": "bold",
+                          "color": "#FFFFFF",
+                          "wrap": true,
+                          "align": "center"
+                        }
+                      ],
+                      "spacing": "xs",
+                      "paddingAll": "10px",
+                      "background": {
+                        "type": "linearGradient",
+                        "angle": "90deg",
+                        "startColor": "#313A47",
+                        "endColor": "#08101C"
+                      },
+                      "cornerRadius": "100px",
+                      "flex": 1,
+                      "borderWidth": "1px",
+                      "borderColor": "#4A515D",
+                      "action": {
+                        "type": "uri",
+                        "label": "來電諮詢",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                      }
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-share-v5.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -1183,7 +1383,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-2"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
                       }
                     }
                   ],
@@ -1561,7 +1761,7 @@
                       "contents": [
                         {
                           "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-ig-v3.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
                           "aspectMode": "cover",
@@ -1569,7 +1769,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "來電諮詢",
+                          "text": "IG",
                           "size": "xxs",
                           "weight": "bold",
                           "color": "#FFFFFF",
@@ -1591,8 +1791,8 @@
                       "borderColor": "#4A515D",
                       "action": {
                         "type": "uri",
-                        "label": "來電諮詢",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                        "label": "IG",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"
                       }
                     },
                     {
@@ -1648,6 +1848,46 @@
                       "contents": [
                         {
                           "type": "image",
+                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
+                          "size": "20px",
+                          "aspectRatio": "1:1",
+                          "aspectMode": "cover",
+                          "flex": 0
+                        },
+                        {
+                          "type": "text",
+                          "text": "來電諮詢",
+                          "size": "xxs",
+                          "weight": "bold",
+                          "color": "#FFFFFF",
+                          "wrap": true,
+                          "align": "center"
+                        }
+                      ],
+                      "spacing": "xs",
+                      "paddingAll": "10px",
+                      "background": {
+                        "type": "linearGradient",
+                        "angle": "90deg",
+                        "startColor": "#313A47",
+                        "endColor": "#08101C"
+                      },
+                      "cornerRadius": "100px",
+                      "flex": 1,
+                      "borderWidth": "1px",
+                      "borderColor": "#4A515D",
+                      "action": {
+                        "type": "uri",
+                        "label": "來電諮詢",
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
+                      }
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "image",
                           "url": "https://linmu.cardtaiwan.com/img/icon-share-v5.png",
                           "size": "20px",
                           "aspectRatio": "1:1",
@@ -1679,7 +1919,7 @@
                       "action": {
                         "type": "uri",
                         "label": "分享名片",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-2"
+                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?share=1&c=linmu&src=https%3A%2F%2Flinmu.cardtaiwan.com%2Fflex-cards.json&v=2026-11-19-3"
                       }
                     }
                   ],
