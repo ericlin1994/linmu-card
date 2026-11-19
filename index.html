@@ -101,7 +101,7 @@
   /* 左右箭頭（JS 在 bindRail 建立）：疊在輪播列兩側、垂直置中（rail 上 4px／下 16px padding 故偏移 -6px） */
   .rail-wrap{position:relative}
   .rail-arrow{position:absolute;top:0;z-index:2;width:44px;height:44px;padding:0 0 3px;
-    border:1px solid rgba(196,131,90,.55);border-radius:50%;background:rgba(245,241,232,.82);color:var(--navy);
+    border:1px solid rgba(0,85,184,.7);border-radius:50%;background:rgba(245,241,232,.82);color:var(--navy);
     font-size:26px;line-height:1;font-family:inherit;display:flex;align-items:center;justify-content:center;cursor:pointer;
     -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(22,35,61,.18);
     -webkit-tap-highlight-color:transparent;transition:opacity .2s,background .2s,top .25s ease}
@@ -118,7 +118,7 @@
   @media (prefers-reduced-motion:reduce){ .rail{transition:none} }
   .rail-arrow:hover:not(:disabled){background:rgba(245,241,232,.96);color:var(--brown)}
   .rail-arrow:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-  .rail-arrow:disabled{opacity:.38;border-color:rgba(196,131,90,.4);cursor:default;box-shadow:none}
+  .rail-arrow:disabled{opacity:.38;border-color:rgba(0,85,184,.4);cursor:default;box-shadow:none}
   .rail-arrow[hidden]{display:none}
   .card{flex:0 0 86%;min-width:0;overflow-wrap:anywhere;scroll-snap-align:center;background:#fff;border-radius:var(--radius);
         padding:18px 16px;box-shadow:0 6px 22px rgba(22,35,61,.10);border:1px solid rgba(22,35,61,.06)}
@@ -279,7 +279,7 @@
   }
   .btn:focus-visible,.topbar button:focus-visible{outline:3px solid var(--gold-2);outline-offset:3px}
   @keyframes pulse{0%,100%{filter:brightness(1)}
-                   50%{filter:brightness(1.14) drop-shadow(0 0 7px rgba(196,131,90,.55))}}
+                   50%{filter:brightness(1.14) drop-shadow(0 0 7px rgba(77,147,230,.55))}}
   /* 底部常駐列：sticky（in-flow，不用 fixed）。放在 #pageContent 最後，捲動時黏在視窗底部，
      捲到頁尾時回到自然位置，不會蓋住下方 tip／footer */
   .dock{position:sticky;bottom:0;z-index:30;margin-top:18px;
@@ -651,7 +651,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b113';
+const BUILD = 'b115';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
