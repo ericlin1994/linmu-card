@@ -96,7 +96,10 @@
   .sec-title em{font-style:normal;color:var(--brown-text)}
 
   /* ── 橫向卡片輪播（對應原圖 1/7～7/7） ── */
-  .rail{display:flex;align-items:flex-start;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 16px;scrollbar-width:none}
+  /* overflow-y 必須明寫 hidden：只寫 overflow-x:auto 時 y 會被算成 auto，而 fitHeight 把 rail 高度縮到「目前那張卡」，
+     比較高的鄰卡就讓 rail 自己變成垂直捲動容器 → 手指上下滑被 rail 吃掉（頁面不動、卡片內容被推走）。
+     overscroll-behavior-x:contain：捲到頭尾不要再觸發瀏覽器的上一頁手勢／橡皮筋，免得一滑就被帶走 */
+  .rail{display:flex;align-items:flex-start;gap:14px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding:4px 20px 16px;scrollbar-width:none}
   .rail::-webkit-scrollbar{display:none}
   /* 左右箭頭（JS 在 bindRail 建立）：疊在輪播列兩側、垂直置中（rail 上 4px／下 16px padding 故偏移 -6px） */
   .rail-wrap{position:relative}
@@ -120,7 +123,8 @@
   .rail-arrow:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .rail-arrow:disabled{opacity:.38;border-color:rgba(0,85,184,.4);cursor:default;box-shadow:none}
   .rail-arrow[hidden]{display:none}
-  .card{flex:0 0 86%;min-width:0;overflow-wrap:anywhere;scroll-snap-align:center;background:#fff;border-radius:var(--radius);
+  /* scroll-snap-stop:always：快速一甩也只能停在下一張，不會飛過中間的卡（iOS／Android 的慣性會越過多個吸附點） */
+  .card{flex:0 0 86%;min-width:0;overflow-wrap:anywhere;scroll-snap-align:center;scroll-snap-stop:always;background:#fff;border-radius:var(--radius);
         padding:18px 16px;box-shadow:0 6px 22px rgba(22,35,61,.10);border:1px solid rgba(22,35,61,.06)}
   .card h2{margin:0 0 4px;font-size:19px;color:var(--navy);letter-spacing:.02em;line-height:1.5}
   .card h2 em{font-style:normal;color:var(--brown)}
@@ -651,7 +655,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b115';
+const BUILD = 'b116';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
