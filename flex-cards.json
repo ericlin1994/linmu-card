@@ -22,7 +22,7 @@
             {
               "type": "text",
               "text": "霖沐室內裝修工程　全室裝修・老屋翻新・店面裝修・局部修繕",
-              "size": "xxs",
+              "size": "xs",
               "weight": "regular",
               "color": "#93A4BC",
               "wrap": true,
@@ -1027,7 +1027,7 @@
             {
               "type": "text",
               "text": "10+ 年經驗・14 項工種整合・1 對 1 專人負責",
-              "size": "xxs",
+              "size": "xs",
               "weight": "regular",
               "color": "#93A4BC",
               "wrap": true,
@@ -1036,7 +1036,7 @@
             {
               "type": "text",
               "text": "點圖看完整版 ›",
-              "size": "xxs",
+              "size": "xs",
               "weight": "bold",
               "color": "#4D93E6",
               "wrap": false,
