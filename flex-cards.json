@@ -42,7 +42,7 @@
               "text": "1 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#6B7280",
+              "color": "#656B78",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -82,7 +82,7 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#2970C3",
+                        "startColor": "#0055B8",
                         "endColor": "#004290"
                       },
                       "cornerRadius": "100px",
@@ -268,9 +268,19 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
+            },
+            {
+              "type": "text",
+              "text": "點圖看完整版 ›",
+              "size": "xxs",
+              "weight": "bold",
+              "color": "#4D93E6",
+              "wrap": false,
+              "margin": "none",
+              "align": "end"
             }
           ],
-          "spacing": "md",
+          "spacing": "sm",
           "paddingAll": "14px",
           "backgroundColor": "#0A1424"
         },
@@ -283,7 +293,7 @@
               "text": "2 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#6B7280",
+              "color": "#656B78",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -323,7 +333,7 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#2970C3",
+                        "startColor": "#0055B8",
                         "endColor": "#004290"
                       },
                       "cornerRadius": "100px",
@@ -475,7 +485,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card2-v1.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card2-v2.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -509,9 +519,19 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
+            },
+            {
+              "type": "text",
+              "text": "點圖看完整版 ›",
+              "size": "xxs",
+              "weight": "bold",
+              "color": "#4D93E6",
+              "wrap": false,
+              "margin": "none",
+              "align": "end"
             }
           ],
-          "spacing": "md",
+          "spacing": "sm",
           "paddingAll": "14px",
           "backgroundColor": "#0A1424"
         },
@@ -524,7 +544,7 @@
               "text": "3 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#6B7280",
+              "color": "#656B78",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -564,7 +584,7 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#2970C3",
+                        "startColor": "#0055B8",
                         "endColor": "#004290"
                       },
                       "cornerRadius": "100px",
@@ -716,7 +736,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card3-v1.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card3-v2.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -750,9 +770,19 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
+            },
+            {
+              "type": "text",
+              "text": "點圖看完整版 ›",
+              "size": "xxs",
+              "weight": "bold",
+              "color": "#4D93E6",
+              "wrap": false,
+              "margin": "none",
+              "align": "end"
             }
           ],
-          "spacing": "md",
+          "spacing": "sm",
           "paddingAll": "14px",
           "backgroundColor": "#0A1424"
         },
@@ -765,7 +795,7 @@
               "text": "4 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#6B7280",
+              "color": "#656B78",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -805,7 +835,7 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#2970C3",
+                        "startColor": "#0055B8",
                         "endColor": "#004290"
                       },
                       "cornerRadius": "100px",
@@ -957,7 +987,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card4-v2.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card4-v3.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -991,9 +1021,19 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
+            },
+            {
+              "type": "text",
+              "text": "點圖看完整版 ›",
+              "size": "xxs",
+              "weight": "bold",
+              "color": "#4D93E6",
+              "wrap": false,
+              "margin": "none",
+              "align": "end"
             }
           ],
-          "spacing": "md",
+          "spacing": "sm",
           "paddingAll": "14px",
           "backgroundColor": "#0A1424"
         },
@@ -1006,7 +1046,7 @@
               "text": "5 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#6B7280",
+              "color": "#656B78",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -1046,7 +1086,7 @@
                       "background": {
                         "type": "linearGradient",
                         "angle": "90deg",
-                        "startColor": "#2970C3",
+                        "startColor": "#0055B8",
                         "endColor": "#004290"
                       },
                       "cornerRadius": "100px",
@@ -1198,7 +1238,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card5-v1.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card5-v2.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -1325,7 +1365,7 @@
                     },
                     {
                       "type": "text",
-                      "text": "Doctor.huang0731@gmail.com",
+                      "text": "Doctor.huang0731\n@gmail.com",
                       "size": "md",
                       "weight": "regular",
                       "color": "#FFFFFF",
@@ -1357,7 +1397,7 @@
                     },
                     {
                       "type": "text",
-                      "text": "桃園市龜山區長慶二街26號",
+                      "text": "桃園市龜山區\n長慶二街26號",
                       "size": "md",
                       "weight": "regular",
                       "color": "#FFFFFF",
@@ -1471,7 +1511,7 @@
                   "background": {
                     "type": "linearGradient",
                     "angle": "90deg",
-                    "startColor": "#2970C3",
+                    "startColor": "#0055B8",
                     "endColor": "#004290"
                   },
                   "cornerRadius": "100px",
@@ -1542,7 +1582,7 @@
               "text": "6 / 6",
               "size": "xxs",
               "weight": "regular",
-              "color": "#6B7280",
+              "color": "#656B78",
               "wrap": false,
               "margin": "none",
               "align": "center"
@@ -1555,46 +1595,6 @@
                   "type": "box",
                   "layout": "horizontal",
                   "contents": [
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-line-v5.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "LINE",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#2970C3",
-                        "endColor": "#004290"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4281CA",
-                      "action": {
-                        "type": "uri",
-                        "label": "LINE",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=line&u=https%3A%2F%2Fline.me%2FR%2Fti%2Fp%2F%40lmdomus"
-                      }
-                    },
                     {
                       "type": "box",
                       "layout": "vertical",
@@ -1633,46 +1633,6 @@
                         "type": "uri",
                         "label": "IG",
                         "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=ig&u=https%3A%2F%2Fwww.instagram.com%2Flmdomus1990%2F"
-                      }
-                    },
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "contents": [
-                        {
-                          "type": "image",
-                          "url": "https://linmu.cardtaiwan.com/img/icon-tel-v1.png",
-                          "size": "20px",
-                          "aspectRatio": "1:1",
-                          "aspectMode": "cover",
-                          "flex": 0
-                        },
-                        {
-                          "type": "text",
-                          "text": "來電諮詢",
-                          "size": "xxs",
-                          "weight": "bold",
-                          "color": "#FFFFFF",
-                          "wrap": true,
-                          "align": "center"
-                        }
-                      ],
-                      "spacing": "xs",
-                      "paddingAll": "10px",
-                      "background": {
-                        "type": "linearGradient",
-                        "angle": "90deg",
-                        "startColor": "#313A47",
-                        "endColor": "#08101C"
-                      },
-                      "cornerRadius": "100px",
-                      "flex": 1,
-                      "borderWidth": "1px",
-                      "borderColor": "#4A515D",
-                      "action": {
-                        "type": "uri",
-                        "label": "來電諮詢",
-                        "uri": "https://liff.line.me/2011946176-OWaDN0zD?t=1&c=linmu&to=tel&u=tel%3A%2B886979329120"
                       }
                     }
                   ],
