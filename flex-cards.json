@@ -234,7 +234,7 @@
         },
         "hero": {
           "type": "image",
-          "url": "https://linmu.cardtaiwan.com/img/card1-v5.jpg",
+          "url": "https://linmu.cardtaiwan.com/img/card1-v6.jpg",
           "size": "full",
           "aspectRatio": "3:4",
           "aspectMode": "cover",
@@ -1457,7 +1457,7 @@
                   "contents": [
                     {
                       "type": "image",
-                      "url": "https://linmu.cardtaiwan.com/img/icon-bizno-flex-4D93E6-v2.png",
+                      "url": "https://linmu.cardtaiwan.com/img/icon-bizno-flex-4D93E6-v3.png",
                       "size": "22px",
                       "aspectRatio": "1:1",
                       "aspectMode": "fit",
