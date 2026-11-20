@@ -21,12 +21,13 @@
           "contents": [
             {
               "type": "text",
-              "text": "霖沐室內裝修工程　全室裝修・老屋翻新・店面裝修・局部修繕",
+              "text": "霖沐室內裝修　全室・老屋・店面・局部",
               "size": "xxs",
               "weight": "regular",
               "color": "#93A4BC",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "adjustMode": "shrink-to-fit"
             }
           ],
           "spacing": "md",
@@ -262,12 +263,13 @@
           "contents": [
             {
               "type": "text",
-              "text": "老屋屋主・首購成家・小店面業主・辦公室・出租房東・設計師",
+              "text": "老屋・首購・店面・辦公室・房東・設計師",
               "size": "xxs",
               "weight": "regular",
               "color": "#93A4BC",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "adjustMode": "shrink-to-fit"
             }
           ],
           "spacing": "sm",
@@ -745,12 +747,13 @@
           "contents": [
             {
               "type": "text",
-              "text": "10+ 年經驗・14 項工種整合・1 對 1 專人負責",
+              "text": "10+ 年經驗・14 項工種・1 對 1 專人",
               "size": "xxs",
               "weight": "regular",
               "color": "#93A4BC",
-              "wrap": true,
-              "margin": "none"
+              "wrap": false,
+              "margin": "none",
+              "adjustMode": "shrink-to-fit"
             }
           ],
           "spacing": "sm",
