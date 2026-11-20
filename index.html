@@ -398,7 +398,12 @@
   .ba-cap{margin:0 20px 14px;font-size:13.5px;line-height:1.7;color:#3C4658}
   .ba-list{display:grid;gap:22px;margin:0 20px}
   .ba-item{margin:0}
-  .ba{display:grid;gap:12px}
+  .ba{display:grid;gap:12px;position:relative}
+  /* 向下圓形把手：疊在兩圖接縫（兩圖等高，.ba 正中央＝接縫中線）；純裝飾，不佔版面、不可互動 */
+  .ba-dn{position:absolute;top:50%;left:50%;z-index:3;width:40px;height:40px;margin:-20px 0 0 -20px;
+         border-radius:50%;background:#fff;color:var(--navy);font:800 18px/40px system-ui,sans-serif;text-align:center;
+         letter-spacing:.1em;text-indent:.1em;box-shadow:0 2px 8px rgba(10,20,36,.40);pointer-events:none}
+  .ba-dn::before{content:"\203A";display:block;transform:rotate(90deg)}
   /* 上 Before／下 After：各自一張完整圖（高度由圖本身的長寬比決定，不裁切、不用 object-fit） */
   .ba-l{position:relative;overflow:hidden;border-radius:14px;background:#EDE7DB;
         border:1px solid rgba(22,35,61,.07);box-shadow:0 6px 22px rgba(22,35,61,.10)}
@@ -612,6 +617,7 @@
       <div class="ba">
         <div class="ba-l"><img src="img/ba-exterior-before-v3.jpg" alt="外觀｜玻璃屋 → 粉牆店面：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">Before</span></div>
         <div class="ba-l"><img src="img/ba-exterior-after-v3.jpg" alt="外觀｜玻璃屋 → 粉牆店面：施工後 After" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">After</span></div>
+        <span class="ba-dn" aria-hidden="true"></span>
       </div>
       <figcaption class="ba-fc">外觀｜玻璃屋 → 粉牆店面</figcaption>
     </figure>
@@ -619,6 +625,7 @@
       <div class="ba">
         <div class="ba-l"><img src="img/ba-lounge-before-v3.jpg" alt="室內｜休憩區：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">Before</span></div>
         <div class="ba-l"><img src="img/ba-lounge-after-v3.jpg" alt="室內｜休憩區：施工後 After" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">After</span></div>
+        <span class="ba-dn" aria-hidden="true"></span>
       </div>
       <figcaption class="ba-fc">室內｜休憩區</figcaption>
     </figure>
@@ -626,6 +633,7 @@
       <div class="ba">
         <div class="ba-l"><img src="img/ba-wash-before-v3.jpg" alt="室內｜洗髮區 → 按摩椅區：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">Before</span></div>
         <div class="ba-l"><img src="img/ba-wash-after-v3.jpg" alt="室內｜洗髮區 → 按摩椅區：施工後 After" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">After</span></div>
+        <span class="ba-dn" aria-hidden="true"></span>
       </div>
       <figcaption class="ba-fc">室內｜洗髮區 → 按摩椅區</figcaption>
     </figure>
@@ -633,6 +641,7 @@
       <div class="ba">
         <div class="ba-l"><img src="img/ba-garden-before-v3.jpg" alt="戶外｜走道 → 白石造景：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">Before</span></div>
         <div class="ba-l"><img src="img/ba-garden-after-v3.jpg" alt="戶外｜走道 → 白石造景：施工後 After" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">After</span></div>
+        <span class="ba-dn" aria-hidden="true"></span>
       </div>
       <figcaption class="ba-fc">戶外｜走道 → 白石造景</figcaption>
     </figure>
@@ -640,6 +649,7 @@
       <div class="ba">
         <div class="ba-l"><img src="img/ba-restroom-before-v3.jpg" alt="廁所：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">Before</span></div>
         <div class="ba-l"><img src="img/ba-restroom-after-v3.jpg" alt="廁所：施工後 After" width="1000" height="1261" loading="lazy" decoding="async"><span class="ba-tag" aria-hidden="true">After</span></div>
+        <span class="ba-dn" aria-hidden="true"></span>
       </div>
       <figcaption class="ba-fc">廁所</figcaption>
     </figure>
