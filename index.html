@@ -392,6 +392,39 @@
   .name span{color:#B2CCE9}
   .slogan i{color:#4D93E6}
   /*HERO_V1_END*/
+  /*BA_V1_BEGIN*/
+  /* BEFORE / AFTER 案例對照（由 rebuild_page.py 產生，勿手改；不碰 .rail／.rail-hint） */
+  .ba-sec{margin:0}
+  .ba-cap{margin:0 20px 14px;font-size:13.5px;line-height:1.7;color:#3C4658}
+  .ba-list{display:grid;gap:22px;margin:0 20px}
+  .ba-item{margin:0}
+  .ba{--p:50;position:relative;aspect-ratio:1108/1397;overflow:hidden;border-radius:14px;background:#EDE7DB;
+      border:1px solid rgba(22,35,61,.07);box-shadow:0 6px 22px rgba(22,35,61,.10);
+      -webkit-user-select:none;user-select:none}
+  .ba img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none}
+  /* Before 墊底；After 疊上，從 --p% 起往右顯示（--p＝Before 可見的百分比） */
+  .ba .ba-a{clip-path:inset(0 0 0 calc(var(--p) * 1%))}
+  .ba-tag{position:absolute;top:10px;z-index:2;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:800;
+          letter-spacing:.06em;line-height:1.5;color:#fff;background:rgba(10,20,36,.78);pointer-events:none}
+  .ba-tag-b{left:10px}
+  .ba-tag-a{right:10px}
+  .ba-range{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;opacity:0;pointer-events:none}
+  /* 拖曳把手：44px 寬直條（只有這條擋觸控，圖片其他地方照樣能捲頁面） */
+  .ba-grip{position:absolute;top:0;bottom:0;left:calc(var(--p) * 1%);z-index:3;width:44px;margin-left:-22px;
+           touch-action:none;cursor:ew-resize;-webkit-tap-highlight-color:transparent}
+  .ba-grip::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:#fff;
+           box-shadow:0 0 0 1px rgba(10,20,36,.35)}
+  .ba-grip::after{content:"\2039 \203A";position:absolute;top:50%;left:50%;width:40px;height:40px;margin:-20px 0 0 -20px;
+           border-radius:50%;background:#fff;color:var(--navy);font:800 18px/40px system-ui,sans-serif;text-align:center;
+           letter-spacing:.1em;text-indent:.1em;box-shadow:0 2px 8px rgba(10,20,36,.40)}
+  .ba-range:focus-visible ~ .ba-grip::after{box-shadow:0 0 0 3px var(--gold-2),0 0 0 5px #fff,0 2px 8px rgba(10,20,36,.40)}
+  .ba-fc{margin:8px 2px 0;font-size:13px;line-height:1.6;color:#3C4658;text-align:center;letter-spacing:.04em}
+  /* 夜景加映：3 欄小圖（外層同時帶 .craft → 沿用既有 lightbox 點圖放大） */
+  .ba-extra.craft{grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 20px 0}
+  .ba-extra.craft figure{background:none;border:0;border-radius:0;overflow:visible}
+  .ba-extra.craft img{height:auto;aspect-ratio:4/5;border-radius:10px;border:1px solid rgba(22,35,61,.07)}
+  .ba-extra .ba-fc{padding:0;margin-top:6px;font-size:12px;line-height:1.5;letter-spacing:.02em}
+  /*BA_V1_END*/
 </style>
 <script>
 /* 分享模式：在畫面繪製前就決定，避免先閃過一頁式網站再隱藏 */
@@ -580,6 +613,78 @@
   </div><!-- /.rail-sec -->
   <div class="count" id="count"><b>1</b> / 6　左右滑動看更多</div>
 
+  <!-- ═══════════ BEFORE / AFTER 案例對照 ═══════════ -->
+  <section class="ba-sec" aria-label="Before After 案例對照">
+  <div class="sec-title">BEFORE / AFTER｜<em>案例對照</em></div>
+  <p class="ba-cap">沐渼 HairSPA／Indiba 英特波・台北市松山區南京東路三段303巷14弄6-1號</p>
+  <div class="ba-list">
+    <figure class="ba-item">
+      <div class="ba" style="--p:50">
+        <img class="ba-b" src="img/ba-exterior-before.jpg" alt="外觀｜玻璃屋 → 粉牆店面：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <img class="ba-a" src="img/ba-exterior-after.jpg" alt="外觀｜玻璃屋 → 粉牆店面：施工後 After" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
+        <input class="ba-range" type="range" min="0" max="100" step="1" value="50" aria-label="外觀｜玻璃屋 → 粉牆店面：Before／After 對比滑桿" aria-valuetext="Before 顯示 50%">
+        <span class="ba-grip" aria-hidden="true"></span>
+      </div>
+      <figcaption class="ba-fc">外觀｜玻璃屋 → 粉牆店面</figcaption>
+    </figure>
+    <figure class="ba-item">
+      <div class="ba" style="--p:50">
+        <img class="ba-b" src="img/ba-lounge-before.jpg" alt="室內｜休憩區：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <img class="ba-a" src="img/ba-lounge-after.jpg" alt="室內｜休憩區：施工後 After" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
+        <input class="ba-range" type="range" min="0" max="100" step="1" value="50" aria-label="室內｜休憩區：Before／After 對比滑桿" aria-valuetext="Before 顯示 50%">
+        <span class="ba-grip" aria-hidden="true"></span>
+      </div>
+      <figcaption class="ba-fc">室內｜休憩區</figcaption>
+    </figure>
+    <figure class="ba-item">
+      <div class="ba" style="--p:50">
+        <img class="ba-b" src="img/ba-wash-before.jpg" alt="室內｜洗髮區 → 按摩椅區：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <img class="ba-a" src="img/ba-wash-after.jpg" alt="室內｜洗髮區 → 按摩椅區：施工後 After" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
+        <input class="ba-range" type="range" min="0" max="100" step="1" value="50" aria-label="室內｜洗髮區 → 按摩椅區：Before／After 對比滑桿" aria-valuetext="Before 顯示 50%">
+        <span class="ba-grip" aria-hidden="true"></span>
+      </div>
+      <figcaption class="ba-fc">室內｜洗髮區 → 按摩椅區</figcaption>
+    </figure>
+    <figure class="ba-item">
+      <div class="ba" style="--p:50">
+        <img class="ba-b" src="img/ba-garden-before.jpg" alt="戶外｜走道 → 白石造景：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <img class="ba-a" src="img/ba-garden-after.jpg" alt="戶外｜走道 → 白石造景：施工後 After" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
+        <input class="ba-range" type="range" min="0" max="100" step="1" value="50" aria-label="戶外｜走道 → 白石造景：Before／After 對比滑桿" aria-valuetext="Before 顯示 50%">
+        <span class="ba-grip" aria-hidden="true"></span>
+      </div>
+      <figcaption class="ba-fc">戶外｜走道 → 白石造景</figcaption>
+    </figure>
+    <figure class="ba-item">
+      <div class="ba" style="--p:50">
+        <img class="ba-b" src="img/ba-restroom-before.jpg" alt="廁所：施工前 Before" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <img class="ba-a" src="img/ba-restroom-after.jpg" alt="廁所：施工後 After" width="1000" height="1261" loading="lazy" decoding="async" draggable="false">
+        <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
+        <input class="ba-range" type="range" min="0" max="100" step="1" value="50" aria-label="廁所：Before／After 對比滑桿" aria-valuetext="Before 顯示 50%">
+        <span class="ba-grip" aria-hidden="true"></span>
+      </div>
+      <figcaption class="ba-fc">廁所</figcaption>
+    </figure>
+  </div>
+  <div class="ba-extra craft">
+    <figure>
+      <img src="img/ba-night-exterior.jpg" alt="外觀・夜間照明" width="1000" height="1261" loading="lazy" decoding="async">
+      <figcaption class="ba-fc">外觀・夜間照明</figcaption>
+    </figure>
+    <figure>
+      <img src="img/ba-night-lounge.jpg" alt="休憩區・夜間" width="1000" height="1261" loading="lazy" decoding="async">
+      <figcaption class="ba-fc">休憩區・夜間</figcaption>
+    </figure>
+    <figure>
+      <img src="img/ba-night-massage.jpg" alt="按摩椅區・暗燈" width="1000" height="1261" loading="lazy" decoding="async">
+      <figcaption class="ba-fc">按摩椅區・暗燈</figcaption>
+    </figure>
+  </div>
+  </section>
+
 
   <!-- ═══════════ 店家資訊 ═══════════ -->
   <div class="sec-title">VISIT｜<em>聯絡資訊</em></div>
@@ -670,7 +775,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b137';
+const BUILD = 'b138';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
@@ -2056,5 +2161,45 @@ bindRail();
   }catch(e){}
 })();
 </script>
+<!--BA_JS_BEGIN--><script>
+/* BEFORE / AFTER 拖曳對比滑桿（rebuild_page.py 產生）。document／window 層級委派，不依賴上面主程式。
+   把手 .ba-grip：pointerdown/move/up（滑鼠＋觸控）；<input type=range class=ba-range> 負責鍵盤與讀屏。
+   pointerdown 掛在 window 捕獲階段並 stopPropagation：避免「桌機滑鼠拖曳捲頁」把這一下當成捲頁起點。 */
+(function(){
+  try{
+    let cur = null;
+    const sync = ba => {
+      const r = ba.querySelector('.ba-range');
+      ba.style.setProperty('--p', r.value);
+      r.setAttribute('aria-valuetext', 'Before 顯示 ' + r.value + '%');
+    };
+    const setVal = (ba, v) => {
+      const r = ba.querySelector('.ba-range');
+      r.value = Math.max(0, Math.min(100, Math.round(v)));
+      sync(ba);
+    };
+    window.addEventListener('pointerdown', e => {
+      const g = e.target && e.target.closest ? e.target.closest('.ba-grip') : null;
+      if(!g || (e.pointerType === 'mouse' && e.button !== 0)) return;
+      const ba = g.closest('.ba'), r = ba.querySelector('.ba-range');
+      e.stopPropagation(); e.preventDefault();
+      cur = {ba: ba, id: e.pointerId, x: e.clientX, v: +r.value, w: ba.getBoundingClientRect().width};
+      try{ g.setPointerCapture(e.pointerId); }catch(_){}
+      try{ r.focus({preventScroll:true}); }catch(_){}
+    }, true);
+    window.addEventListener('pointermove', e => {
+      if(!cur || e.pointerId !== cur.id) return;
+      setVal(cur.ba, cur.v + (e.clientX - cur.x) / cur.w * 100);
+    });
+    const end = e => { if(cur && e.pointerId === cur.id) cur = null; };
+    window.addEventListener('pointerup', end);
+    window.addEventListener('pointercancel', end);
+    document.addEventListener('input', e => {
+      const r = e.target;
+      if(r && r.classList && r.classList.contains('ba-range')) sync(r.closest('.ba'));
+    });
+  }catch(e){}
+})();
+</script><!--BA_JS_END-->
 </body>
 </html>
