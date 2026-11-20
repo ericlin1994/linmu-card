@@ -268,16 +268,6 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
-            },
-            {
-              "type": "text",
-              "text": "點圖看完整版 ›",
-              "size": "xxs",
-              "weight": "bold",
-              "color": "#4D93E6",
-              "wrap": false,
-              "margin": "none",
-              "align": "end"
             }
           ],
           "spacing": "sm",
@@ -519,16 +509,6 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
-            },
-            {
-              "type": "text",
-              "text": "點圖看完整版 ›",
-              "size": "xxs",
-              "weight": "bold",
-              "color": "#4D93E6",
-              "wrap": false,
-              "margin": "none",
-              "align": "end"
             }
           ],
           "spacing": "sm",
@@ -770,16 +750,6 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
-            },
-            {
-              "type": "text",
-              "text": "點圖看完整版 ›",
-              "size": "xs",
-              "weight": "bold",
-              "color": "#4D93E6",
-              "wrap": false,
-              "margin": "none",
-              "align": "end"
             }
           ],
           "spacing": "sm",
@@ -1021,16 +991,6 @@
               "color": "#93A4BC",
               "wrap": true,
               "margin": "none"
-            },
-            {
-              "type": "text",
-              "text": "點圖看完整版 ›",
-              "size": "xxs",
-              "weight": "bold",
-              "color": "#4D93E6",
-              "wrap": false,
-              "margin": "none",
-              "align": "end"
             }
           ],
           "spacing": "sm",
