@@ -407,7 +407,8 @@
   /* 上 Before／下 After：各自一張完整圖（高度由圖本身的長寬比決定，不裁切、不用 object-fit） */
   .ba-l{position:relative;overflow:hidden;border-radius:14px;background:#EDE7DB;
         border:1px solid rgba(22,35,61,.07);box-shadow:0 6px 22px rgba(22,35,61,.10)}
-  .ba-l img{display:block;width:100%;height:auto}
+  .ba-l img{display:block;width:100%;height:auto;cursor:zoom-in}
+  html.drag-scroll .ba-l img{cursor:zoom-in}
   /* 標籤：貼在各自那張圖的左上角；兩張位置／大小／字級完全一致。深藍 #0A1424 不透明＋白字 */
   .ba-tag{position:absolute;top:10px;left:10px;z-index:2;box-sizing:border-box;padding:7px 12px;border-radius:8px;font-size:15px;font-weight:800;
           letter-spacing:.06em;line-height:1.4;color:#fff;background:#0A1424;pointer-events:none}
@@ -760,7 +761,7 @@ let payloadFailed = false;
 
 /* 改動 flex-cards.json 後請把 BUILD 往後跳一號：
    LINE 內建瀏覽器會快取檔案，不跳號會一直送出舊版卡片 */
-const BUILD = 'b142';
+const BUILD = 'b143';
 const PAGE_VER = '2026-10-23-1310'   // 每次改頁面就改這個，用來確認手機拿到的是最新版
 
 /* ═══════ FLEX_PAYLOAD_START（由 build_flex.py 自動寫入，勿手改）═══════ */
@@ -1980,12 +1981,14 @@ bindRail();
     document.addEventListener('click', e => {
       const t = e.target;
       if(!t || !t.closest) return;
-      const img = t.closest('.wall img, .craft img, .ba-extra img');   /* 已被換成 .ph 的就不會命中 */
+      /*LB_BA_BEGIN*/
+      const img = t.closest('.wall img, .craft img, .ba-extra img, .ba-item img');   /* 已被換成 .ph 的就不會命中 */
       if(!img || !box.hidden) return;
       if(!(img.currentSrc || img.src)) return;
-      /* 分組：BA 加映（.ba-extra）只在自己的容器內循環；其餘維持原本的 .wall／.craft 全域一組 */
-      const grp = img.closest('.ba-extra');
+      /* 分組：BA 加映（.ba-extra）與每個 BA 組（figure.ba-item）各自只在自己的容器內切換；其餘維持 .wall／.craft 全域一組 */
+      const grp = img.closest('.ba-extra, .ba-item');
       list = Array.prototype.slice.call(grp ? grp.querySelectorAll('img') : document.querySelectorAll('.wall img, .craft img'));
+      /*LB_BA_END*/
       const i = list.indexOf(img);
       if(i < 0) return;
       prevOverflow = document.body.style.overflow;
